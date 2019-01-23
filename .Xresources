@@ -14,14 +14,11 @@ Xft.lcdfilter: lcddefault
 !! Xterm
 XTerm*locale: true
 XTerm.termName: xterm-256color
-!XTerm*faceName: xft:Hack:size=12
-!XTerm*faceName: Hack:size=12
-!XTerm*font: xft:monospace:size=12
 XTerm*scrollBar: false
 XTerm*saveLines: 99000
 XTerm*renderFont: true
-XTerm*faceName: Liberation Mono:size=14:antialias=true
-!XTerm*cursorColor: white
+XTerm*faceName: Hack:size=14:antialias=true
+!XTerm*faceName: Liberation Mono:size=14:antialias=true
 XTerm*cursorColor: green
 XTerm*cursorBlink: true
 XTerm*innerBorder: 6
@@ -34,11 +31,10 @@ URxvt.termName: rxvt-unicode-256color
 URxvt.buffered: false
 URxvt.intensityStyles: false
 !URxvt.font: xft:monospace:size=12
-URxvt.font: xft:Liberation Mono:size=14:antialias=true
-!URxvt.font: xft:Hack:size=12
+!URxvt.font: xft:Liberation Mono:size=14:antialias=true
+URxvt.font: xft:Hack:size=14:antialias=true
 URxvt.saveLines: 99000
 URxvt.scrollBar: false
-!URxvt.cursorColor: white
 URxvt.cursorColor: green
 !URxvt.background: #000000
 !URxvt.foreground: #ffffff
@@ -48,7 +44,7 @@ URxvt.visualBell: true
 
 
 !! Extensions
-!URxvt.perl-lib: /home/john/.urxvt/ext
+!URxvt.perl-lib: ~/.urxvt/ext
 !URxvt.perl-ext-common: default,tabbed,matcher,keyboard-select,resize-font,-tabbed
 !URxvt.perl-ext-common: default,matcher,url-select,keyboard-select,resize-font
 URxvt.perl-ext-common: default,matcher,url-select,resize-font
@@ -67,11 +63,8 @@ URxvt.keysym.M-escape: perl:keyboard-select:activate
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 
-
-
 ! colors
-#include "/home/john/.Xresources.d/solarized"
-
+#include ".Xresources.d/solarized"
 
 !#! dmenu
 !#dmenu.font: Hack-12
