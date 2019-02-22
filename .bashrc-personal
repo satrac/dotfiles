@@ -11,11 +11,13 @@ fi
 #keep it safe
 alias rm='rm -i'
 alias cp='cp -i'
+alias mv='mv -i'
 alias ln='ln -i'
 
 # aliases
 alias pacman='sudo pacman --color auto'
 alias update='sudo pacman -Syuu'
+
 #pacman unlock
 alias unlock="sudo rm /var/lib/pacman/db.lck"
 
@@ -89,5 +91,5 @@ stty -ixoff
 
 
 # display system information
-screenfetch
+neofetch
 
