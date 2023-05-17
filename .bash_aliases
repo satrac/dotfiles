@@ -1,5 +1,11 @@
 # ~/.bash_aliases
 
+DOTFILES_REPO=~/.dotfiles
+export DOTFILES_REPO
+
+# dotfiles
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+
 # keep things safe
 alias cp='cp -i'
 alias rm='rm -i'
@@ -42,6 +48,4 @@ alias hw="hwinfo --short"
 #mounting the folder Public for exchange betsweeh host and guest on virtualbox
 alias vbm="sudo mount -t vboxsf -o rw,uid=1000,gid=1000 Public /home/$USER/Public"
 
-# dotfiles
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
