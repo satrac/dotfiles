@@ -1,0 +1,31 @@
+[pull]
+    rebase = false
+[color]
+    ui = true
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+[color "diff"]
+    whitespace = red reverse
+[rebase]
+    autosquash = true
+[push]
+    default = current
+[core]
+    fileMode = true
+    editor = vim
+[include]
+    path = ~/.gitconfig.user
+[alias]
+	st = status -sb
+	ll = log --oneline
+	last = log -1 HEAD --stat
+	cm = commit -m
+	rv = remote -v
+	d = diff
+	dv = difftool -t vimdiff -y
+	gl = config --global -l
+	se = !git rev-list --all | xargs git grep -F
+	recent = branch --sort=-creatordate
+
