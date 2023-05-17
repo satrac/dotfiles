@@ -1,0 +1,13 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=/home/johnm/repos/aseprite/build/bin/aseprite %f
+Path=/home/johnm/repos/aseprite/build/bin
+Name=Aseprite
+Icon=/home/johnm/repos/aseprite/build/bin/data/icons/ase256.png
+Terminal=false
+StartupWMClass=Aseprite
+MimeType=application/uproject
+Comment=Animated Sprite Editor & Pixel Art Tool

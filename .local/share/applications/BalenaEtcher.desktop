@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=BalenaEtcher
+StartupNotify=true
+Exec=/home/johnm/apps/balenaEtcher-1.18.4-x64.AppImage
+Icon=/home/johnm/.icons/balena_etcher.png
+Type=Application
+Terminal=false

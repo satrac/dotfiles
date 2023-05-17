@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=OneDriveGUI
+StartupNotify=true
+Exec=/home/johnm/apps/OneDriveGUI-1.0.2-x86_64.AppImage
+Icon=/home/johnm/.icons/OneDriveGUI.png
+Type=Application
+Terminal=false
