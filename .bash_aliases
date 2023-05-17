@@ -46,6 +46,5 @@ alias merge='xrdb -merge ~/.Xresources'
 alias hw="hwinfo --short"
 
 #mounting the folder Public for exchange betsweeh host and guest on virtualbox
-alias vbm="sudo mount -t vboxsf -o rw,uid=1000,gid=1000 Public /home/$USER/Public"
-
-
+#alias vbm="sudo mount -t vboxsf -o rw,uid=1000,gid=1000 Public /home/$USER/Public"
+alias vbm="sudo mount -t vboxsf -o rw,uid=1000,gid=1000 public /home/$USER/public"
