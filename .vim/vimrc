@@ -86,9 +86,9 @@ set background=dark
 " Set the color scheme.
 "colorscheme onedark
 
-"let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_dark='hard'
 "colorscheme gruvbox
-"colorscheme gruvbox-material
+colorscheme gruvbox-material
 
 "let g:solorized_termcolors=256
 "colorscheme solarized
@@ -98,7 +98,7 @@ set background=dark
 
 " disable italics
 let g:dracula_italic = 0
-colorscheme dracula
+"colorscheme dracula
 "colorscheme wilight256
 
 " seoul256 (dark):
@@ -364,8 +364,9 @@ autocmd FileType make setlocal noexpandtab
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-let g:airline_theme='dracula'
-"let g:airline_theme='onedark'
+"let g:airline_theme='gruvbox'
+"let g:airline_theme='dracula'
+let g:airline_theme='onedark'
 "let g:airline_theme='luna'
 
 " ............................................................................

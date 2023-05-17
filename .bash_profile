@@ -27,5 +27,9 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+if [ -f "$HOME/vulkan/1.3.243.0/setup-env.sh" ]; then
+    source "$HOME/vulkan/1.3.243.0/setup-env.sh"
+fi
+
 #xmodmap ~/.Xmodmap
 #export QT_QPA_PLATFORMTHEME=gtk2
