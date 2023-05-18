@@ -37,11 +37,23 @@ stty -ixoff
 #dotfiles checkout --force
 #dotfiles config --local status.showUntrackedFiles no
 
+# source vulkan
+if [ -f "$HOME/vulkan/1.3.243.0/setup-env.sh" ]; then
+    . "$HOME/vulkan/1.3.243.0/setup-env.sh"
+fi
+
+
 # source cargo
-. "$HOME/.cargo/env"
+if [ -f "$HOME/.cargo/env" ]; then
+    . "$HOME/.cargo/env"
+fi
 
 # source rakubrew
-eval "$(/home/johnm/.rakubrew/bin/rakubrew init Bash)"
+if [ -f "$HOME/.rakubrew/bin/rakubrew" ]; then
+    eval "$(/home/johnm/.rakubrew/bin/rakubrew init Bash)"
+fi
 
 # display system information
-neofetch
+if [ -f /usr/bin/neofetch ]; then
+    neofetch
+fi

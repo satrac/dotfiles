@@ -12,10 +12,15 @@ call plug#begin('~/.vim/plugged')
 
 " Atom One Dark theme.
 Plug 'joshdick/onedark.vim'
+Plug 'ghifarit53/tokyonight-vim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'junegunn/seoul256.vim'
 Plug 'colepeters/spacemacs-theme.vim'
+
 Plug 'sainnhe/gruvbox-material'
+Plug 'sainnhe/edge'
+Plug 'sainnhe/everforest'
+Plug 'sainnhe/sonokai'
 Plug 'phanviet/vim-monokai-pro'
 Plug 'flazz/vim-colorschemes'
 Plug 'chriskempson/base16-vim'
@@ -83,12 +88,41 @@ syntax enable
 " Set the color scheme to dark.
 set background=dark
 
-" Set the color scheme.
 "colorscheme onedark
 
-let g:gruvbox_contrast_dark='hard'
 "colorscheme gruvbox
-colorscheme gruvbox-material
+
+let g:gruvbox_contrast_dark='hard'
+let g:grubbox_materal_better_performance = 1
+"colorscheme gruvbox-material
+
+" edge_style vailable values: default, aura, neon
+let g:edge_style = 'neon'
+let g:edge_better_performance = 1
+
+" edge_dim_foreground values 0(default), 1 gray foreground
+"let g:edge_dim_foreground = 1
+"colorscheme edge
+
+" everforest_background values: 'hard', 'medium'(default), 'soft'
+let g:everforest_background = 'hard'
+
+" For better performance
+let g:everforest_better_performance = 1
+"colorscheme everforest
+
+
+" sonokai_style values: default, atlantis, andromeda, shusia, maia, espresso
+let g:sonokai_style = 'espresso'
+let g:sonokai_better_performance = 1
+let g:sonokai_enable_italic=1
+let g:sonokai_transparent_background=0
+colorscheme sonokai
+
+" tokyonight_style values: night, storm
+let g:tokyonight_style = 'night'
+let g:tokyonight_enable_italic = 1
+"colorscheme tokyonight
 
 "let g:solorized_termcolors=256
 "colorscheme solarized
@@ -365,8 +399,14 @@ autocmd FileType make setlocal noexpandtab
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 "let g:airline_theme='gruvbox'
+"let g:airline_theme='gruvbox_material'
+"let g:airline_theme='edge'
+"let g:airline_theme='everforest'
+let g:airline_theme='sonokai'
+"let g:airline_theme='wombat'
 "let g:airline_theme='dracula'
-let g:airline_theme='onedark'
+"let g:airline_theme='onedark'
+"let g:airline_theme='tokyonight'
 "let g:airline_theme='luna'
 
 " ............................................................................
@@ -498,6 +538,7 @@ endfunction
 
 "noremap <silent> <C-f> :call ToggleNetrw()<CR>
 noremap <silent> <leader>f :call ToggleNetrw()<CR>
+noremap <silent> <leader>pv :Ex<CR>
 
 augroup netrw_mappings
   autocmd!
