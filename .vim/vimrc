@@ -281,7 +281,6 @@ set cursorline                  " have line indicating the cursor position
 set ruler                       " show the cursor position
 set showcmd
 "set showmode
-set noshowmode                  " vim-airline already displays mode
 set laststatus=2                " always show statusline even if only 1 window
 "set cmdheight=2
 set modelines=2
@@ -403,6 +402,8 @@ autocmd FileType make setlocal noexpandtab
 " ........
 " vim-airline plugin
 " ........
+
+set noshowmode                  " vim-airline already displays mode
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
