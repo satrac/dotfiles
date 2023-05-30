@@ -40,13 +40,11 @@ workspace_layout default
 ##############################
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 1
-new_float normal
 default_border pixel 1
 default_floating_border normal
 
 # Hide borders
-#hide_edge_borders none
+# hide_edge_borders none
 # hide_edge_borders smart
 
 # change borders
@@ -115,6 +113,9 @@ bindsym $mod+Return exec --no-startup-id kitty
 
 # start alternate terminal
 bindsym $mod+Shift+Return exec --no-startup-id terminator
+
+# start third alternate terminal
+bindsym $mod+Ctrl+Return exec --no-startup-id urxvt
 
 # for muscle memory
 bindsym Ctrl+$alt+t exec --no-startup-id x-terminal-emulator
@@ -344,6 +345,8 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
 # for_window [class="(?i)virtualbox"] floating enable border normal
 # for_window [class="Xfburn"] floating enable border normal
 # for_window [title="Citrix Receiver"] floating enable border normal
+for_window [title="System Monitor"] floating enable border normal
+for_window [floating] move position center, border normal
 
 # set border of floating window
 #for_window [class="urxvt"] border pixel 1
@@ -352,7 +355,7 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
 for_window [urgent=latest] focus
 
 # set position of floating window
-for_window [class=".*"] move position center
+#for_window [class=".*"] move position center
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -418,21 +421,23 @@ set $white       #ffffff
 set $black       #000000
 set $transparent #00000000
 
-# set_from_resource $darkred     color1  #000000
-# set_from_resource $red         color9  #000000
-# set_from_resource $darkgreen   color2  #000000
-# set_from_resource $green       color10 #000000
-# set_from_resource $darkyellow  color3  #000000
-# set_from_resource $yellow      color11 #000000
-# set_from_resource $darkblue    color4  #000000
-# set_from_resource $blue        color12 #000000
-# set_from_resource $darkmagenta color5  #000000
-# set_from_resource $magenta     color13 #000000
-# set_from_resource $darkcyan    color6  #000000
-# set_from_resource $cyan        color14 #000000
-# set_from_resource $darkwhite   color7  #000000
-# set_from_resource $white       color15 #000000
-
+# default colors are from tango palete
+set_from_resource $black          color0  #2e3436
+set_from_resource $brightblack    color8  #6e706b
+set_from_resource $red            color1  #cc0000
+set_from_resource $brightred      color9  #ef2929
+set_from_resource $green          color2  #4e9a06
+set_from_resource $brightgreen    color10 #8ae234
+set_from_resource $yellow         color3  #edd400
+set_from_resource $brightyellow   color11 #fce94f
+set_from_resource $blue           color4  #3465a4
+set_from_resource $brightblue     color12 #729fcf
+set_from_resource $magenta        color5  #92659a
+set_from_resource $brightmagenta  color13 #c19fbe
+set_from_resource $cyan           color6  #07c7ca
+set_from_resource $brightcyan     color14 #63e9e9
+set_from_resource $white          color7  #d3d7cf
+set_from_resource $brightwhite    color15 #eeeeec
 
 # Theme
 #include ~/.config/i3/themes/endeavouros.conf
@@ -451,7 +456,8 @@ bar {
 
     colors {
         separator #081419
-        background #253941
+#        background #253941
+        background #1d2021
         #statusline #839496
         focused_workspace  #fdf6e3 #6c71c4 #fdf6e3
         active_workspace   #fdf6e3 #6c71c4 #fdf6e3

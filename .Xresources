@@ -102,4 +102,5 @@ dmenu.selforeground: S_base00
 dmenu.selbackground: S_base02
 
 ! colors
-#include ".Xresources.d/manjaro"
+!#include ".Xresources.d/manjaro"
+#include ".Xresources.d/gruvbox"
