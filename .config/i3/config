@@ -79,7 +79,7 @@ tiling_drag modifier titlebar
 #bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
-#bindsym $mod+Ctrl+m exec pavucontrol
+bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
 
@@ -188,6 +188,9 @@ bindsym $mod+q split toggle
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
+# enter global fullscreen mode for the focused container
+bindsym $mod+Shift+f fullscreen toggle global
+
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
@@ -219,9 +222,11 @@ bindsym $mod+BackSpace scratchpad show
 
 
 # navigate workspaces next / previous
-bindsym $mod+Ctrl+Right workspace next
-bindsym $mod+Ctrl+Left workspace prev
-
+#bindsym $mod+Ctrl+Right workspace next
+#bindsym $mod+Ctrl+Left workspace prev
+# using this because of Citrix to windows
+bindsym $mod+$alt+Right workspace next
+bindsym $mod+$alt+Left workspace prev
 
 # Start Applications
 # bindsym $mod+Shift+Return exec thunar
@@ -325,7 +330,6 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
 
 # Open specific applications in floating mode
 # for_window [title="alsamixer"] floating enable border pixel 1
-# for_window [class="calamares"] floating enable border normal
 # for_window [class="Clipgrab"] floating enable border normal
 # for_window [title="File Transfer*"] floating enable border normal
 # for_window [class="Galculator"] floating enable border pixel 1
@@ -334,19 +338,27 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
 # for_window [class="Lxappearance"] floating enable sticky enable border normal
 # for_window [class="Nitrogen"] floating enable sticky enable border normal
 # for_window [class="Oblogout"] fullscreen enable border normal
-# for_window [class="Pamac-manager"] floating enable border normal
-# for_window [class="Pavucontrol"] floating enable border normal
+for_window [class="Pavucontrol"] floating enable border normal
 # for_window [class="qt5ct"] floating enable sticky enable border normal
 # for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 # for_window [class="Simple-scan"] floating enable border normal
 # for_window [class="(?i)System-config-printer.py"] floating enable border normal
 # for_window [class="Skype"] floating enable border normal
 # for_window [class="Timeset-gui"] floating enable border normal
-# for_window [class="(?i)virtualbox"] floating enable border normal
+for_window [title="(?i)steam"] floating enable, border normal
+for_window [title="(?i)power manager"] floating enable, border normal
+for_window [title="(?i)onedrivegui"] floating enable, border normal
+for_window [class="(?i)blueman-manager"] floating enable, border normal
+for_window [title="(?i)bitwarden"] floating enable, border normal
+for_window [class="(?i)virtualbox"] floating enable, border normal
 # for_window [class="Xfburn"] floating enable border normal
-# for_window [title="Citrix Receiver"] floating enable border normal
-for_window [title="System Monitor"] floating enable border normal
-for_window [floating] move position center, border normal
+for_window [title="System Monitor"] floating enable, border normal
+# stubborn citrix receiver
+for_window [class="(?i)wfica"] floating enable, border normal, move position center
+for_window [title="Hosted Workstation (SSL/TLS Secured, 256 bit)"] floating enable, border normal, move position center
+
+# enable window icons for all windows with extra padding of 1 px
+for_window [all] title_window_icon padding 1px
 
 # set border of floating window
 #for_window [class="urxvt"] border pixel 1
@@ -355,7 +367,7 @@ for_window [floating] move position center, border normal
 for_window [urgent=latest] focus
 
 # set position of floating window
-#for_window [class=".*"] move position center
+for_window [floating] move position center, border normal
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -369,13 +381,13 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # Set shut down, restart and locking features
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+    bindsym l exec --no-startup-id ~/.config/i3/scripts/i3exit.sh lock, mode "default"
+    bindsym s exec --no-startup-id ~/.config/i3/scripts/i3exit.sh suspend, mode "default"
+    bindsym u exec --no-startup-id ~/.config/i3/scripts/i3exit.sh switch_user, mode "default"
+    bindsym e exec --no-startup-id ~/.config/i3/scripts/i3exit.sh logout, mode "default"
+    bindsym h exec --no-startup-id ~/.config/i3/scripts/i3exit.sh hibernate, mode "default"
+    bindsym r exec --no-startup-id ~/.config/i3/scripts/i3exit.sh reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id ~/.config/i3/scripts/i3exit.sh shutdown, mode "default"
 
     # exit system mode: "Enter" or "Escape"
     bindsym Return mode "default"
@@ -524,7 +536,7 @@ exec --no-startup-id blueman-applet
 # automount usb drives
 exec --no-startup-id /usr/bin/udiskie -a -n -t &
 
-#exec --no-startup-id xfce4-power-manager
+#exec --no-startup-id xfce4-power-manager &
 
 #exec --no-startup-id xautolock -time 10 -locker blurlock
 #exec_always --no-startup-id ff-theme-util

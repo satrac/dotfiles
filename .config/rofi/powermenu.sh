@@ -16,8 +16,8 @@ $shutdown" | rofi -dmenu\
                   -i\
                   -p "Power"\
                   -config "~/.config/rofi/powermenu.rasi"\
-                  -font "Cascadia Code 12"\
-                  -width "15"\
+                  -font "JetBrainsMono Nerd Font 12"\
+                  -width "20"\
                   -lines 5\
                   -line-margin 3\
                   -line-padding 10\
@@ -43,4 +43,3 @@ then
 else
     echo "No match"
 fi
-
