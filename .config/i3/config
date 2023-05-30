@@ -519,7 +519,10 @@ exec --no-startup-id nm-applet
 exec --no-startup-id nitrogen --restore
 
 exec --no-startup-id blueman-applet
-exec --no-startup-id diodon
+#exec --no-startup-id diodon
+
+# automount usb drives
+exec --no-startup-id /usr/bin/udiskie -a -n -t &
 
 #exec --no-startup-id xfce4-power-manager
 
