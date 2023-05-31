@@ -87,6 +87,10 @@ bindsym $mod+Ctrl+m exec pavucontrol
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
+# Screen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+
 # Pulse Audio controls (requires pactl)
 #bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute   0 toggle
 #bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
@@ -99,11 +103,17 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext  exec playerctl next
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+#set $refresh_i3status killall -SIGUSR1 i3status
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+#bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute   @DEFAULT_SINK@ toggle && $refresh_i3status
+#bindsym XF86AudioMicMute     exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@   +5%    # increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@   -5%    # decrease sound volume
+bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute   @DEFAULT_SINK@   toggle # mute sound
+bindsym XF86AudioMicMute     exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 
 # start a terminal
@@ -322,15 +332,12 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
 
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
-# assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
-# assign [class="Skype"] $ws5
 
 # floating rules
 
 # Open specific applications in floating mode
 # for_window [title="alsamixer"] floating enable border pixel 1
-# for_window [class="Clipgrab"] floating enable border normal
 # for_window [title="File Transfer*"] floating enable border normal
 # for_window [class="Galculator"] floating enable border pixel 1
 # for_window [class="GParted"] floating enable border normal
@@ -338,27 +345,26 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
 # for_window [class="Lxappearance"] floating enable sticky enable border normal
 # for_window [class="Nitrogen"] floating enable sticky enable border normal
 # for_window [class="Oblogout"] fullscreen enable border normal
-for_window [class="Pavucontrol"] floating enable border normal
+for_window [class="Pavucontrol"] floating enable
 # for_window [class="qt5ct"] floating enable sticky enable border normal
 # for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 # for_window [class="Simple-scan"] floating enable border normal
 # for_window [class="(?i)System-config-printer.py"] floating enable border normal
-# for_window [class="Skype"] floating enable border normal
-# for_window [class="Timeset-gui"] floating enable border normal
-for_window [title="(?i)steam"] floating enable, border normal
-for_window [title="(?i)power manager"] floating enable, border normal
-for_window [title="(?i)onedrivegui"] floating enable, border normal
-for_window [class="(?i)blueman-manager"] floating enable, border normal
-for_window [title="(?i)bitwarden"] floating enable, border normal
-for_window [class="(?i)virtualbox"] floating enable, border normal
-# for_window [class="Xfburn"] floating enable border normal
-for_window [title="System Monitor"] floating enable, border normal
+for_window [class="(?i)skype"] floating enable
+for_window [class="(?i)zoom"] floating enable
+#for_window [title="(?i)steam"] floating enable border pixel 1
+for_window [title="(?i)power manager"] floating enable
+for_window [title="(?i)onedrivegui"] floating enable
+for_window [class="(?i)blueman-manager"] floating enable
+for_window [class="(?i)bitwarden"] floating enable
+for_window [class="(?i)virtualbox"] floating enable
+for_window [title="System Monitor"] floating enable
 # stubborn citrix receiver
-for_window [class="(?i)wfica"] floating enable, border normal, move position center
-for_window [title="Hosted Workstation (SSL/TLS Secured, 256 bit)"] floating enable, border normal, move position center
-
-# enable window icons for all windows with extra padding of 1 px
-for_window [all] title_window_icon padding 1px
+for_window [class="(?i)wfica"] floating enable
+#for_window [title="Hosted Workstation (SSL/TLS Secured, 256 bit)"] floating enable, border normal, move position center
+for_window [class="brave-browser"] border pixel 1
+# enable window icons for all windows with extra padding of 4 px
+for_window [all] title_window_icon padding 4px
 
 # set border of floating window
 #for_window [class="urxvt"] border pixel 1
@@ -368,6 +374,7 @@ for_window [urgent=latest] focus
 
 # set position of floating window
 for_window [floating] move position center, border normal
+for_window [tiling] border pixel 1
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -463,23 +470,61 @@ include ~/.config/i3/themes/gruvbox.conf
 bar {
     status_command i3blocks
     tray_output primary
+    mode dock
     position bottom
-    font pango:JetBrainsMono Nerd Font, FontAwesome 10
+    font pango:JetBrainsMono Nerd Font 10
+    workspace_buttons yes
+    strip_workspace_numbers no
+    strip_workspace_name no
+    workspace_min_width 30
 
-    colors {
-        separator #081419
+#    from endeavouros
+#    colors {
+#        separator #081419
 #        background #253941
+#        #statusline #839496
+#        <colorclass> <border> <background> <text>
+#        focused_workspace  #fdf6e3 #6c71c4 #fdf6e3
+#        active_workspace   #fdf6e3 #6c71c4 #fdf6e3
+#        inactive_workspace #002b36 #586e75 #002b36
+#        urgent_workspace   #d33682 #d33682 #fdf6e3
+
+#        statusline         $white
+#        separator          $transparent
+#  }
+
+    # default colors
+    # colors {
+    #     background #000000
+    #     statusline #ffffff
+    #     separator #666666
+
+    #     focused_workspace  #4c7899 #285577 #ffffff
+    #     active_workspace   #333333 #5f676a #ffffff
+    #     inactive_workspace #333333 #222222 #888888
+    #     urgent_workspace   #2f343a #900000 #ffffff
+    #     binding_mode       #2f343a #900000 #ffffff
+    # }
+
+    # gruvbox
+    colors {
+        separator  #081419
         background #1d2021
-        #statusline #839496
-        focused_workspace  #fdf6e3 #6c71c4 #fdf6e3
-        active_workspace   #fdf6e3 #6c71c4 #fdf6e3
-        inactive_workspace #002b36 #586e75 #002b36
-        urgent_workspace   #d33682 #d33682 #fdf6e3
+        statusline #ebdbb2
+
+#       <colorclass>       <border> <background> <text>
+        focused_workspace  #d65d0e #d65d0e #ebdbb2
+        active_workspace   #d65d0e #1d2021 #ebdbb2
+        inactive_workspace #d65d0e #1d2021 #ebdbb2
+        urgent_workspace   #cc241d #cc241d #ebdbb2
 
         statusline         $white
         separator          $transparent
   }
+
+
 }
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -489,6 +534,10 @@ bar {
 
 
 # Autostart applications
+
+# Configure keyboard repeat rate
+# xset r rate <delay> <repeatrate>
+exec --no-startup-id xset r rate 220 160
 
 # set monitor layout
 # used arandr to set layout

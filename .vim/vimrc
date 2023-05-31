@@ -102,7 +102,7 @@ set background=dark
 
 let g:gruvbox_contrast_dark='hard'
 let g:grubbox_materal_better_performance = 1
-"colorscheme gruvbox-material
+colorscheme gruvbox-material
 
 " edge_style vailable values: default, aura, neon
 let g:edge_style = 'neon'
@@ -125,7 +125,7 @@ let g:sonokai_style = 'espresso'
 let g:sonokai_better_performance = 1
 let g:sonokai_enable_italic=1
 let g:sonokai_transparent_background=0
-colorscheme sonokai
+"colorscheme sonokai
 
 " tokyonight_style values: night, storm
 let g:tokyonight_style = 'night'
@@ -408,10 +408,10 @@ set noshowmode                  " vim-airline already displays mode
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 "let g:airline_theme='gruvbox'
-"let g:airline_theme='gruvbox_material'
+let g:airline_theme='gruvbox_material'
 "let g:airline_theme='edge'
 "let g:airline_theme='everforest'
-let g:airline_theme='sonokai'
+"let g:airline_theme='sonokai'
 "let g:airline_theme='wombat'
 "let g:airline_theme='dracula'
 "let g:airline_theme='onedark'
