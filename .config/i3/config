@@ -11,7 +11,7 @@
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 #font pango:monospace 8
-font pango:JetBrainsMono Nerd Font 10
+font pango:JetBrainsMono Nerd Font 9
 #font xft:URWGothic-Book 11
 #font pango: Noto Sans Regular 10
 
@@ -363,8 +363,9 @@ for_window [title="System Monitor"] floating enable
 for_window [class="(?i)wfica"] floating enable
 #for_window [title="Hosted Workstation (SSL/TLS Secured, 256 bit)"] floating enable, border normal, move position center
 for_window [class="brave-browser"] border pixel 1
-# enable window icons for all windows with extra padding of 4 px
-for_window [all] title_window_icon padding 4px
+# enable window icons for all windows with extra padding of 2 px
+for_window [all] title_window_icon padding 2px
+#for_window [all] title_window_icon none
 
 # set border of floating window
 #for_window [class="urxvt"] border pixel 1
@@ -472,7 +473,7 @@ bar {
     tray_output primary
     mode dock
     position bottom
-    font pango:JetBrainsMono Nerd Font 10
+    font pango:JetBrainsMono Nerd Font 9
     workspace_buttons yes
     strip_workspace_numbers no
     strip_workspace_name no
@@ -518,7 +519,7 @@ bar {
         inactive_workspace #d65d0e #1d2021 #ebdbb2
         urgent_workspace   #cc241d #cc241d #ebdbb2
 
-        statusline         $white
+        statusline         #ebdbb2
         separator          $transparent
   }
 
@@ -537,7 +538,7 @@ bar {
 
 # Configure keyboard repeat rate
 # xset r rate <delay> <repeatrate>
-exec --no-startup-id xset r rate 220 160
+exec --no-startup-id xset r rate 220 180
 
 # set monitor layout
 # used arandr to set layout
