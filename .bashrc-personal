@@ -42,6 +42,14 @@ if [ -f "$HOME/vulkan/1.3.243.0/setup-env.sh" ]; then
     source "$HOME/vulkan/1.3.243.0/setup-env.sh"
 fi
 
+# source gitcompletion
+if [ -f .git-completion.bash ]; then
+  source .git-completion.bash
+fi
+
+if [ -f /usr/bin/kubectl ]; then
+  kubectl completion bash | bash
+fi
 
 # source cargo
 if [ -f "$HOME/.cargo/env" ]; then
