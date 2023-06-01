@@ -40,7 +40,7 @@ URxvt.buffered:                 false
 URxvt.intensityStyles:          false
 !URxvt.font:                    xft:monospace:size=12
 !URxvt.font:                    xft:Liberation Mono:size=12:antialias=true
-URxvt.font:                    xft:JetBrainsMono Nerd Font:size=12:antialias=true
+URxvt.font:                    xft:JetBrainsMono Nerd Font:size=10:antialias=true
 !URxvt.font:                     xft:Hack:size=12:antialias=true
 URxvt.saveLines:                99000
 URxvt.scrollBar:                false

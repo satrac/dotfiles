@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=/home/johnm/.local/bin/merge_xrdb.sh
+Path=/home/johnm/.local/bin
+Comment=update xrdb with .Xresources
+Name=Merge xrdb
+Terminal=false
+StartupWMClass=Merge xrdb
+MimeType=application/uproject
