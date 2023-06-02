@@ -144,11 +144,11 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 
 # A more modern dmenu replacement is rofi:
+#i3-dmenu-desktop --dmenu="rofi -dmenu -i -p 'apps'"
 bindsym $mod+d exec "rofi -modi drun,run -show drun"
-
 bindsym Ctrl+space exec --no-startup-id rofi -show run
-
 bindsym $alt+Tab exec --no-startup-id rofi -show window
+
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -258,11 +258,16 @@ bindsym $mod+$alt+Left workspace prev
 # bindsym $mod+t exec --no-startup-id pkill compton
 # bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 # bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-# bindsym Print exec --no-startup-id i3-scrot
-# bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-# bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
-# bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 
+# screenshot
+bindsym Print exec --no-startup-id ~/.config/i3/scripts/i3-scrot.sh
+bindsym $mod+Print --release exec --no-startup-id ~/.config/i3/scripts/i3-scrot.sh -w
+bindsym $mod+Shift+Print --release exec --no-startup-id ~/.config/i3/scripts/i3-scrot.sh -s
+
+# Screenshot keybindings with i3 and scrot that are copied to the clipboard
+# bindsym Print exec "scrot -e 'mv $f ~/tmp &&  xclip -selection clipboard -t image/png -i ~/tmp/$n'; sleep 1; exec notify-send 'screenshot has been saved to ~/tmp'"
+# bindsym $mod+Print --release exec "scrot -ue 'mv $f ~/tmp && xclip -selection clipboard -t image/png -i ~/tmp/$n'; sleep 1; exec notify-send 'screenshot has been saved to ~/tmp'"
+# bindsym $mod+Shift+Print --release exec "notify-send 'selection will be saved to ~/tmp'; scrot -se 'mv $f ~/tmp && xclip -selection clipboard -t image/png -i ~/tmp/$n'"
 
 # Workspace names
 # to display names or symbols instead of plain workspace numbers you can use
@@ -536,7 +541,17 @@ bar {
 # Configure keyboard repeat rate
 # xset r rate <delay>       <repeatrate>
 #             lower=shorter lower=slower
-exec --no-startup-id xset r rate 220 90
+#     default 500           30
+exec --no-startup-id xset r rate 250 90
+
+# turn off bell
+exec --no-starup-id xset b off
+
+# disable capslock
+#exec --no-startup-id setxkbmap -option ctrl:nocaps
+
+# set capslock as an additional ctrl
+exec --no-startup-id setxkbmap -option caps:ctrl_modifier
 
 # set monitor layout
 # used arandr to set layout
@@ -558,6 +573,7 @@ exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 # Starts authentication-agent needed to get sudo password check available for GUIs needing it.
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
+# notifications
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 # Start XDG autostart .desktop files using dex. See also
@@ -576,10 +592,18 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# restore wallpaper
 exec --no-startup-id nitrogen --restore
 
+# A service that provides the org.kde.StatusNotifierWatcher interface for XApps
+exec --no-startup-id /usr/libexec/xapps/sn-watcher/xapp-sn-watcher &
+
 exec --no-startup-id blueman-applet
+
+# GTK+ clipboard manager
 #exec --no-startup-id diodon
+
+exec ---no-startup-id redshift-gtk
 
 # automount usb drives
 exec --no-startup-id /usr/bin/udiskie -a -n -t &
@@ -590,8 +614,7 @@ exec --no-startup-id /usr/bin/udiskie -a -n -t &
 #exec_always --no-startup-id ff-theme-util
 #exec_always --no-startup-id fix_xcursor
 
-#exec --no-startup-id xrandr --output HDMI-0 --auto --right-of DP-1
-#exec --no-startup-id picom
+
 
 # autolock && suspend
 #exec --no-startup-id xautolock -time 10 -locker "/home/$USER/.config/i3/scripts/lock.sh"

@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=xset_fix
-Icon=system-run
-Exec=xset r rate 220 90
-Terminal=false
-Type=Application
-X-GNOME-Autostart-enabled=true
