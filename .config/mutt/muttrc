@@ -1,0 +1,87 @@
+source "colors.muttrc"
+source "passwords.muttrc"
+
+set imap_keepalive = 900
+set imap_check_subscribed = no
+
+set index_format="%4C %Z %{%b %d %R} %-15.15L (%?l?%4l&%4c?) %s"
+
+set folder = "imaps://imap.gmail.com:993"
+set smtp_url = "smtps://$imap_user:$imap_pass@smtp.gmail.com:465"
+
+set smtp_authenticators = "gssapi:login"
+
+set imap_check_subscribed
+set hostname = "gmail.com"
+
+set spoolfile = "+INBOX"
+set trash = "=[Gmail]/Trash"
+set record = "=[Gmail]/Sent Mail"
+set postponed = "=[Gmail]/Drafts"
+
+set editor = "nvim"
+
+unbind * "\Cc"
+unbind prompt "<Esc>"
+
+set abort_key = "<Esc>"
+
+set timeout = 10
+set mail_check = 10
+set sidebar_visible = no
+set mail_check_stats = yes
+set mailcap_path = "~/.config/mutt/mailcap"
+set sidebar_format="%B%?F? [%F]?%* %?N?%N/?%S"
+
+auto_view text/*
+auto_view image/*
+auto_view video/*
+auto_view audio/*
+auto_view application/pdf
+
+set use_from = yes
+set ssl_starttls = yes
+set envelope_from = yes
+set ssl_force_tls = yes
+
+set forward_format = "fwd: %s"
+
+set sort = "threads"
+set sort_aux = "reverse-last-date-received"
+
+unset move
+unset record
+unset mark_old
+unset mime_forward
+unset confirmappend
+unset collapse_unread
+
+set quit = yes
+set delete = yes
+set sort_alias = "alias"
+
+ignore *
+unignore from: to: cc: date: subject:
+hdr_order from: to: cc: date: subject:
+
+set tilde
+set include
+set sort_re
+set fcc_attach
+set pager_stop
+set smart_wrap
+set menu_scroll
+set forward_quote
+
+unset markers
+
+mailboxes =INBOX "=[Gmail]/Sent Mail" =[Gmail]/Trash =[Gmail]/Drafts =[Gmail]/Spam
+
+bind attach,index,pager \CD next-page
+bind attach,index,pager \CU previous-page
+bind pager g top
+bind pager G bottom
+bind attach,index g first-entry
+bind attach,index G last-entry
+
+# vim:ft=muttrc
