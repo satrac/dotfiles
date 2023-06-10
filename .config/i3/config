@@ -1,28 +1,45 @@
 # i3 config file (v4)
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-#######################
-# config starts here: #
-#######################
+###############################################################################
+# defont font                                                                 #
+###############################################################################
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 #font pango:monospace 8
-font pango:JetBrainsMono Nerd Font 9
-#font xft:URWGothic-Book 11
+#font pango:JetBrainsMono Nerd Font 8
+font pango:FiraCode Nerd Font Mono Ret 8
+#font xft:URWGothic-Book 8
 #font pango: Noto Sans Regular 10
+
+
+###############################################################################
+# Define the $mod variable/key                                                #
+###############################################################################
 
 # set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 set $alt Mod1
 set $super Mod4
 
-#####################
-# workspace layout: #
-#####################
+###############################################################################
+# Define the movement keys - variables                                        #
+###############################################################################
+
+set $left h
+set $down j
+set $up k
+set $right l
+
+
+###############################################################################
+# workspace layout                                                            #
+###############################################################################
 
 # default i3 tiling mode:
 workspace_layout default
@@ -35,12 +52,13 @@ workspace_layout default
 # Each new window will open fullscreen as a tab (left to right)
 #workspace_layout tabbed
 
-##############################
-# extra options for windows: #
-##############################
+###############################################################################
+# border options for windows                                                  #
+###############################################################################
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 1
+#default_border pixel 1
+default_border normal
 default_floating_border normal
 
 # Hide borders
@@ -52,36 +70,10 @@ bindsym $mod+u border none
 bindsym $mod+y border pixel 1
 bindsym $mod+n border normal
 
-# Set inner/outer gaps
-gaps inner 5
-gaps outer -2
 
-# Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
-
-# Smart borders (draw borders around container only if it is not the only container on this workspace)
-# on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-#smart_borders on
-
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
-
-# move tiling windows via drag & drop by left-clicking into the title bar,
-# or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
-
-##################
-# sound-section: #
-##################
-
-# i3blocks provides these
-#exec --no-startup-id volumeicon
-#bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
-#exec --no-startup-id pulseaudio
-#exec --no-startup-id pa-applet
-bindsym $mod+Ctrl+m exec pavucontrol
-
-################################################################################################
+###############################################################################
+# brightness settings                                                         #
+###############################################################################
 
 # Screen brightness controls
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
@@ -90,6 +82,18 @@ bindsym $mod+Ctrl+m exec pavucontrol
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+
+
+###############################################################################
+# audio settings                                                              #
+###############################################################################
+
+# i3blocks provides these
+#exec --no-startup-id volumeicon
+#bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+#exec --no-startup-id pulseaudio
+#exec --no-startup-id pa-applet
+bindsym $mod+Ctrl+m exec pavucontrol
 
 # Pulse Audio controls (requires pactl)
 #bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute   0 toggle
@@ -115,8 +119,10 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute   @DEFAULT_SINK@   toggle # mute sound
 bindsym XF86AudioMicMute     exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
+###############################################################################
+# start a terminal                                                            #
+###############################################################################
 
-# start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
 #bindsym $mod+Return exec --no-startup-id terminal
 bindsym $mod+Return exec --no-startup-id kitty
@@ -130,11 +136,20 @@ bindsym $mod+Ctrl+Return exec --no-startup-id urxvt
 # for muscle memory
 bindsym Ctrl+$alt+t exec --no-startup-id x-terminal-emulator
 
+###############################################################################
+# Stopping applications                                                       #
+###############################################################################
+
 # kill app
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # kill focused window
 bindsym $mod+Shift+q kill
+
+
+###############################################################################
+# menu                                                                        #
+###############################################################################
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id dmenu_run
@@ -149,17 +164,28 @@ bindsym $mod+d exec "rofi -modi drun,run -show drun"
 bindsym Ctrl+space exec --no-startup-id rofi -show run
 bindsym $alt+Tab exec --no-startup-id rofi -show window
 
-
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
 
-#focus_follows_mouse no
+
+###############################################################################
+# Moving around in i3                                                         #
+###############################################################################
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# move tiling windows via drag & drop by left-clicking into the title bar,
+# or left-clicking anywhere into the window while holding the floating modifier.
+tiling_drag modifier titlebar
+
+focus_follows_mouse yes
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -179,12 +205,18 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+
+###############################################################################
+# Tiling parameters                                                           #
+###############################################################################
+
 # split orientation
+
+default_orientation horizontal
 
 # split in horizontal orientation
 #bindsym $mod+h split h;exec notify-send 'tile horizontally'
 #bindsym $mod+h split h
-#bindsym $mod+minus split h;exec notify-send 'tile horizontally'
 bindsym $mod+Shift+bar split horizontal
 
 # split in vertical orientation
@@ -221,6 +253,10 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+###############################################################################
+# scratchpad                                                                  #
+###############################################################################
+
 # move the currently focused window to the scratchpad
 #bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+Shift+BackSpace move scratchpad;exec notify-send 'moved window to scratchpad'
@@ -230,13 +266,6 @@ bindsym $mod+Shift+BackSpace move scratchpad;exec notify-send 'moved window to s
 #bindsym $mod+minus scratchpad show
 bindsym $mod+BackSpace scratchpad show
 
-
-# navigate workspaces next / previous
-#bindsym $mod+Ctrl+Right workspace next
-#bindsym $mod+Ctrl+Left workspace prev
-# using this because of Citrix to windows
-bindsym $mod+$alt+Right workspace next
-bindsym $mod+$alt+Left workspace prev
 
 # Start Applications
 # bindsym $mod+Shift+Return exec thunar
@@ -259,6 +288,10 @@ bindsym $mod+$alt+Left workspace prev
 # bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 # bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 
+###############################################################################
+# screenshots                                                                 #
+###############################################################################
+
 # screenshot
 bindsym Print exec --no-startup-id ~/.config/i3/scripts/i3-scrot.sh
 bindsym $mod+Print --release exec --no-startup-id ~/.config/i3/scripts/i3-scrot.sh -w
@@ -268,6 +301,15 @@ bindsym $mod+Shift+Print --release exec --no-startup-id ~/.config/i3/scripts/i3-
 # bindsym Print exec "scrot -e 'mv $f ~/tmp &&  xclip -selection clipboard -t image/png -i ~/tmp/$n'; sleep 1; exec notify-send 'screenshot has been saved to ~/tmp'"
 # bindsym $mod+Print --release exec "scrot -ue 'mv $f ~/tmp && xclip -selection clipboard -t image/png -i ~/tmp/$n'; sleep 1; exec notify-send 'screenshot has been saved to ~/tmp'"
 # bindsym $mod+Shift+Print --release exec "notify-send 'selection will be saved to ~/tmp'; scrot -se 'mv $f ~/tmp && xclip -selection clipboard -t image/png -i ~/tmp/$n'"
+
+#bindsym Print exec maim -s --format png /dev/stdout | xclip -selection clipboard -t image/png -i
+#bindsym $mod+Print exec maim --select | tee ~/Pictures/$(date +%s).png | xclip -sel c -t image/png
+
+
+###############################################################################
+# Define workspaces                                                           #
+###############################################################################
+
 
 # Workspace names
 # to display names or symbols instead of plain workspace numbers you can use
@@ -330,10 +372,27 @@ workspace $ws4 output $monitor2
 workspace $ws6 output $monitor2
 workspace $ws8 output $monitor2
 
+############################
+# moving around workspaces #
+############################
+
+# navigate workspaces next / previous
+#bindsym $mod+Ctrl+Right workspace next
+#bindsym $mod+Ctrl+Left workspace prev
+# using this because of Citrix to windows
+bindsym $mod+$alt+Right workspace next
+bindsym $mod+$alt+Left workspace prev
+
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
 bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
+
+
+#################################
+# window rules                  #
+#################################
+
 
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
@@ -341,14 +400,19 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
 
 # floating rules
 
+# enable window icons for all windows with extra padding of 2 px
+#for_window [all] title_window_icon none
+for_window [all] title_window_icon padding 2px
+
+# set position of floating window
+for_window [floating] move position center
+
+# set border for all tiling window
+for_window [tiling] border normal
+
 # top level default rules
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
-
-# set position of floating window
-for_window [all] title_window_icon padding 2px
-for_window [floating] move position center, border normal
-for_window [tiling] border pixel 1
 
 # Open specific applications in floating mode
  for_window [class="Nitrogen"] floating enable sticky enable border normal
@@ -370,20 +434,40 @@ for_window [title="System Monitor"] floating enable
 for_window [class="(?i)wfica"] floating enable sticky enable border normal
 for_window [title="Hosted Workstation (SSL/TLS Secured, 256 bit)"] floating enable sticky enable border normal
 for_window [class="brave-browser"] border pixel 1
-# enable window icons for all windows with extra padding of 2 px
-#for_window [all] title_window_icon none
 
-# set border of floating window
-#for_window [class="urxvt"] border pixel 1
+# I prefer my terminals with border pixel 1
+for_window [class="(?i)urxvt"] border pixel 1
+for_window [class="(?i)xterm"] border pixel 1
+for_window [class="(?i)kitty"] border pixel 1
+for_window [class="(?i)terminator"] border pixel 1
+for_window [class="(?i)konsole"] border pixel 1
+for_window [class="(?i)gnome-terminal-server"] border pixel 1
 
+# special case for Guake
 for_window [title="Guake\!"] floating enable, border none
 for_window [title="Guake Preferences"] floating enable, border pixel 1
+
+
+
+
+
+################################
+# reload changed configuration #
+################################
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
+
+##############################################################################################
+# how to exit, logoff, shutdown, reboot, suspend, ...
+
+# Lock screen
+#bindsym $mod+9 exec --no-startup-id blurlock
+bindsym $mod+9 exec --no-startup-id loginctl lock-session
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
@@ -405,7 +489,10 @@ mode "$mode_system" {
 }
 bindsym $mod+0 mode "$mode_system"
 
+
+####################################################################################################
 # resize window (you can also use the mouse for that)
+
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
@@ -432,8 +519,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Lock screen
-bindsym $mod+9 exec --no-startup-id blurlock
+
 
 #####################################
 # color settings for bar and windows
@@ -465,6 +551,16 @@ set_from_resource $brightwhite    color15 #eeeeec
 #include ~/.config/i3/themes/endeavouros.conf
 #include ~/.config/i3/themes/manjaro.conf
 include ~/.config/i3/themes/gruvbox.conf
+#include ~/.config/i3/themes/nord.conf
+
+##############
+# bar toggle #
+##############
+
+# bar toggle, hide or show
+#bindsym $mod+b bar mode toggle
+
+#bindsym $mod+i bar mode invisible
 
 ############################################
 # bar settings (input comes from i3blocks) #
@@ -475,7 +571,9 @@ bar {
     tray_output primary
     mode dock
     position bottom
-    font pango:JetBrainsMono Nerd Font 9
+    font pango:FiraCode Nerd Font Ret 10
+#    font pango:JetBrainsMono Nerd Font 10
+#    font xft:URWGothic-Book 11
     workspace_buttons yes
     strip_workspace_numbers no
     strip_workspace_name no
@@ -536,13 +634,102 @@ bar {
 #}
 
 
+
+
+#####################################################################################################################
+#################                          i3 gaps next                                             #################
+#####################################################################################################################
+
+#for_window [class="^.*"] border pixel 1
+#gaps inner 10
+#gaps outer 1
+#smart_gaps on
+#smart_borders on
+
+# Set inner/outer gaps
+gaps inner 7
+gaps outer -2
+
+# Smart gaps (gaps used if only more than one container on the workspace)
+smart_gaps on
+
+# Smart borders (draw borders around container only if it is not the only container on this workspace)
+# on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
+#smart_borders on
+
+#####################################################################################################################
+#################                          i3 gaps change                                           #################
+#####################################################################################################################
+
+
+
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+
+
+#####################################################################################################################
+#################                          picom and wallpaper                                      #################
+#####################################################################################################################
+
+#if you want transparency on non-focused windows, ...
+#exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
+#exec_always --no-startup-id nitrogen --restore
+#exec_always --no-startup-id ~/.config/i3/scripts/mouse.sh
+
+
+
+####################################################################################################################
+#################           autostart   -    execute applications at boot time                      #################
+#####################################################################################################################
+
+
+#Authentication dialog (polkit-gnome)
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+
 # Autostart applications
 
 # Configure keyboard repeat rate
 # xset r rate <delay>       <repeatrate>
 #             lower=shorter lower=slower
 #     default 500           30
-exec --no-startup-id xset r rate 250 90
+#exec --no-startup-id xset r rate 250 90
+exec --no-startup-id xset r rate 300 50
 
 # turn off bell
 exec --no-starup-id xset b off
@@ -586,7 +773,7 @@ exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -i ~/Pictures/Wallpapers/i3lockdualwallpaper.png --color=000000 --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.

@@ -3,7 +3,8 @@
 
 case "$1" in
   lock)
-    slimlock
+    #slimlock
+    loginctl lock-session
     ;;
   logout)
     i3-msg exit

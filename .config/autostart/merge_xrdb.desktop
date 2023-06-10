@@ -8,5 +8,5 @@ Path=/home/johnm/.local/bin
 Comment=update xrdb with .Xresources
 Name=Merge xrdb
 Terminal=false
-StartupWMClass=Merge xrdb
+StartupWMClass=mergexrdb
 MimeType=application/uproject
