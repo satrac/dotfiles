@@ -423,17 +423,16 @@ for_window [class="Pavucontrol"] floating enable
 # for_window [class="Simple-scan"] floating enable border normal
 # for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="(?i)zoom"] floating enable
-#for_window [title="(?i)steam"] floating enable border pixel 1
 for_window [title="(?i)power manager"] floating enable
 for_window [title="(?i)onedrivegui"] floating enable
 for_window [class="(?i)blueman-manager"] floating enable
 for_window [class="(?i)bitwarden"] floating enable
 for_window [class="(?i)virtualbox"] floating enable
 for_window [title="System Monitor"] floating enable
-# stubborn citrix receiver
+
+# citrix receiver
 for_window [class="(?i)wfica"] floating enable sticky enable border normal
 for_window [title="Hosted Workstation (SSL/TLS Secured, 256 bit)"] floating enable sticky enable border normal
-for_window [class="brave-browser"] border pixel 1
 
 # I prefer my terminals with border pixel 1
 for_window [class="(?i)urxvt"] border pixel 1
@@ -447,8 +446,11 @@ for_window [class="(?i)gnome-terminal-server"] border pixel 1
 for_window [title="Guake\!"] floating enable, border none
 for_window [title="Guake Preferences"] floating enable, border pixel 1
 
+# browser
+for_window [class="(?i)brave-browser"] border pixel 1
 
-
+# steam
+for_window [title="(?i)steam"] border pixel 1
 
 
 ################################
@@ -719,8 +721,9 @@ mode "$mode_gaps_outer" {
 
 
 #Authentication dialog (polkit-gnome)
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+# Ubuntu changed it's location
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
 # Autostart applications
 
