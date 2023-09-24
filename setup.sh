@@ -35,7 +35,7 @@ DOTFILES=`dirname $SCRIPT_PATH`
 #   link "$DOTFILES/$file" "$HOME/$file"
 # done
 
-# # Install .local/share/application 
+# # Install .local/share/application
 # mkdir -vp $HOME/.local/share/applications
 # for file in $(find .local/share/applications -maxdepth 1 -type f -not -name .DS_Store -not -name .git | sort); do
 #   link "$DOTFILES/$file" "$HOME/$file"
@@ -53,9 +53,6 @@ DOTFILES=`dirname $SCRIPT_PATH`
 
 # # Install .Xresources.d dir
 # link "$DOTFILES/.Xresources.d" "$HOME/.Xresources.d"
-
-# # Install vim dir
-# link "$DOTFILES/.vim" "$HOME/.vim"
 
 # Install .config files
 # mkdir -vp $HOME/.config
