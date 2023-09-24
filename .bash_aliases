@@ -1,10 +1,11 @@
 # ~/.bash_aliases
 
-DOTFILES_REPO=~/.dotfiles
-export DOTFILES_REPO
+DOTFILES=~/Repos/dotfiles
+export DOTFILES
 
 # dotfiles
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+#alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias dotfiles="git --git-dir=$DOTFILES --work-tree=$DOTFILES"
 
 # keep things safe
 alias cp='cp -i'
@@ -12,10 +13,12 @@ alias rm='rm -i'
 alias mv='mv -i'
 alias ln='ln -i'
 
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
 alias em='emacs -nw'
 alias dd='dd status=progress'
+
+alias n='nvim'
+alias v='vim'
+alias code='codium'
 
 # human readable output
 alias df='df -h'
@@ -46,5 +49,4 @@ alias merge='xrdb -merge ~/.Xresources'
 alias hw="hwinfo --short"
 
 #mounting the folder Public for exchange betsweeh host and guest on virtualbox
-#alias vbm="sudo mount -t vboxsf -o rw,uid=1000,gid=1000 Public /home/$USER/Public"
-alias vbm="sudo mount -t vboxsf -o rw,uid=1000,gid=1000 public /home/$USER/public"
+alias vbm="sudo mount -t vboxsf -o rw,uid=1000,gid=1000 Public /home/$USER/Public"

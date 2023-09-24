@@ -28,4 +28,3 @@
 	gl = config --global -l
 	se = !git rev-list --all | xargs git grep -F
 	recent = branch --sort=-creatordate
-
