@@ -18,7 +18,16 @@ alias dd='dd status=progress'
 
 alias n='nvim'
 alias v='vim'
-alias code='codium'
+# vimdiff mode
+alias vd='v -d'
+# open each file in tab
+alias vp='v -p'
+# open each file vertsplit
+alias vo='v -O'
+alias vv='v ~/.vimrc'
+
+#alias code='codium'
+alias t=tmux
 
 # human readable output
 alias df='df -h'

@@ -58,10 +58,10 @@ fi
 [[ -f "$HOME/.rakubrew/bin/rakubrew" ]] && eval "$($HOME/.rakubrew/bin/rakubrew init Bash)"
 
 # display system information
-if [[ -f /usr/bin/fastfetch ]]; then
-    fastfetch
-elif [[ -f $HOME/.cargo/bin/macchina ]]; then
-    macchina
-elif [[ -f /usr/bin/neofetch ]]; then
-    neofetch
-fi
+#if [[ -f /usr/bin/fastfetch ]]; then
+#    fastfetch
+#elif [[ -f $HOME/.cargo/bin/macchina ]]; then
+#    macchina
+#elif [[ -f /usr/bin/neofetch ]]; then
+#    neofetch
+#fi
