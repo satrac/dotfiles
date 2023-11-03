@@ -5,11 +5,11 @@
 [keybindings]
 [profiles]
   [[default]]
+    allow_bold = False
     background_color = "#2E3440"
     background_darkness = 0.85
-    background_type = transparent
     cursor_blink = False
-    font = JetBrainsMono Nerd Font Mono 10
+    font = JetBrainsMono Nerd Font Mono 11
     foreground_color = "#D8DEE9"
     show_titlebar = False
     scrollbar_position = hidden
@@ -32,6 +32,7 @@
     background_color = "#1d2021"
     background_darkness = 0.85
     background_type = transparent
+    cursor_blink = False
     cursor_fg_color = "#282828"
     cursor_bg_color = "#ebdbb2"
     font = JetBrainsMono Nerd Font Mono 10
@@ -51,12 +52,106 @@
     background_type = transparent
     cursor_blink = False
     cursor_bg_color = "#D8DEE9"
-    font = JetBrainsMono Nerd Font Mono 10
+    font = JetBrainsMono Nerd Font Mono 12
     foreground_color = "#D8DEE9"
     show_titlebar = False
     scrollbar_position = hidden
     scrollback_lines = 99000
     palette = "#3B4252:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#88C0D0:#E5E9F0:#4C566A:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#8FBCBB:#ECEFF4"
+    use_system_font = False
+    bold_is_bright = True
+  [[Batman]]
+    background_color = "#1b1d1e"
+    background_darkness = 0.85
+    background_type = transparent
+    cursor_blink = False
+    cursor_bg_color = "#fcef0c"
+    font = JetBrainsMono Nerd Font Mono 10
+    foreground_color = "#6f6f6f"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#1b1d1e:#e6dc44:#c8be46:#f4fd22:#737174:#747271:#62605f:#c6c5bf:#505354:#fff78e:#fff27d:#feed6c:#919495:#9a9a9d:#a3a3a6:#dadbd6"
+    use_system_font = False
+    bold_is_bright = True
+  [[Afterglow]]
+    background_color = "#212121"
+    background_darkness = 0.85
+    background_type = transparent
+    cursor_blink = False
+    cursor_bg_color = "#d0d0d0"
+    font = JetBrainsMono Nerd Font Mono 10
+    foreground_color = "#d0d0d0"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#151515:#ac4142:#7e8e50:#e5b567:#6c99bb:#9f4e85:#7dd6cf:#d0d0d0:#505050:#ac4142:#7e8e50:#e5b567:#6c99bb:#9f4e85:#7dd6cf:#f5f5f5"
+    use_system_font = False
+    bold_is_bright = True
+  [[AlienBlood]]
+    icon_bell = False
+    background_color = "#1e1e2e"
+    background_darkness = 0.85
+    cursor_blink = False
+    cursor_bg_color = "#f5e0dc"
+    font = JetBrainsMono Nerd Font Mono 12
+    foreground_color = "#cdd6f4"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#45475a:#f38ba8:#a6e3a1:#f9e2af:#89b4fa:#f5c2e7:#94e2d5:#bac2de:#585b70:#f38ba8:#a6e3a1:#f9e2af:#89b4fa:#f5c2e7:#94e2d5:#a6adc8"
+    use_system_font = False
+    bold_is_bright = True
+  [[Catppuccin_Mocha]]
+    background_color = "#1e1e2e"
+    background_darkness = 0.85
+    cursor_blink = False
+    cursor_bg_color = "#f5e0dc"
+    font = JetBrainsMono Nerd Font Mono 12
+    foreground_color = "#cdd6f4"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#45475a:#f38ba8:#a6e3a1:#f9e2af:#89b4fa:#f5c2e7:#94e2d5:#bac2de:#585b70:#f38ba8:#a6e3a1:#f9e2af:#89b4fa:#f5c2e7:#94e2d5:#a6adc8"
+    use_system_font = False
+    bold_is_bright = True
+  [[Adventure]]
+    background_color = "#040404"
+    background_darkness = 0.85
+    cursor_blink = False
+    cursor_bg_color = "#feffff"
+    font = JetBrainsMono Nerd Font Mono 10
+    foreground_color = "#feffff"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#040404:#d84a33:#5da602:#eebb6e:#417ab3:#e5c499:#bdcfe5:#dbded8:#685656:#d76b42:#99b52c:#ffb670:#97d7ef:#aa7900:#bdcfe5:#e4d5c7"
+    use_system_font = False
+    bold_is_bright = True
+  [[JetBrains Darcula]]
+    background_color = "#202020"
+    background_darkness = 0.85
+    cursor_blink = False
+    cursor_bg_color = "#ffffff"
+    font = JetBrainsMono Nerd Font Mono 10
+    foreground_color = "#adadad"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#000000:#fa5355:#126e00:#c2c300:#4581eb:#fa54ff:#33c2c1:#adadad:#555555:#fb7172:#67ff4f:#ffff00:#6d9df1:#fb82ff:#60d3d1:#eeeeee"
+    use_system_font = False
+    bold_is_bright = True
+  [[Solarized Dark Higher Contrast]]
+    background_color = "#001e27"
+    background_darkness = 0.85
+    cursor_blink = False
+    cursor_bg_color = "#f34b00"
+    font = FiraCode Nerd Font weight=450 11
+    foreground_color = "#9cc2c3"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#002831:#d11c24:#6cbe6c:#a57706:#2176c7:#c61c6f:#259286:#eae3cb:#006488:#f5163b:#51ef84:#b27e28:#178ec8:#e24d8e:#00b39e:#fcf4dc"
     use_system_font = False
     bold_is_bright = True
 [layouts]
@@ -67,5 +162,5 @@
     [[[child1]]]
       type = Terminal
       parent = window0
-      profile = Nord
+      profile = Solarized Dark Higher Contrast
 [plugins]
