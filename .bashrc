@@ -121,3 +121,4 @@ fi
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
 
+. "$HOME/.cargo/env"

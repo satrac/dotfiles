@@ -1,14 +1,13 @@
 [global_config]
   handle_size = 4
+  inactive_color_offset = 0.9027777777777778
   enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
   always_split_with_profile = True
 [keybindings]
 [profiles]
   [[default]]
-    allow_bold = False
     background_color = "#2E3440"
     background_darkness = 0.85
-    cursor_blink = False
     font = JetBrainsMono Nerd Font Mono 11
     foreground_color = "#D8DEE9"
     show_titlebar = False
@@ -17,6 +16,7 @@
     palette = "#3b4252:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#b48ead:#88c0d0:#e5e9f0:#4c566a:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#b48ead:#8fbcbb:#eceff4"
     use_system_font = False
     bold_is_bright = True
+    copy_on_selection = True
   [[nord]]
     background_color = "#2E3440"
     cursor_blink = False
@@ -50,9 +50,8 @@
     background_color = "#2E3440"
     background_darkness = 0.9
     background_type = transparent
-    cursor_blink = False
     cursor_bg_color = "#D8DEE9"
-    font = JetBrainsMono Nerd Font Mono 12
+    font = MonaspiceRn NFM 14
     foreground_color = "#D8DEE9"
     show_titlebar = False
     scrollbar_position = hidden
@@ -60,6 +59,7 @@
     palette = "#3B4252:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#88C0D0:#E5E9F0:#4C566A:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#8FBCBB:#ECEFF4"
     use_system_font = False
     bold_is_bright = True
+    copy_on_selection = True
   [[Batman]]
     background_color = "#1b1d1e"
     background_darkness = 0.85
@@ -146,7 +146,7 @@
     background_darkness = 0.85
     cursor_blink = False
     cursor_bg_color = "#f34b00"
-    font = FiraCode Nerd Font weight=450 11
+    font = MonaspiceRn NF 14
     foreground_color = "#9cc2c3"
     show_titlebar = False
     scrollbar_position = hidden
@@ -162,5 +162,5 @@
     [[[child1]]]
       type = Terminal
       parent = window0
-      profile = Solarized Dark Higher Contrast
+      profile = Nord
 [plugins]

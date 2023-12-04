@@ -104,4 +104,6 @@ dmenu.selbackground: S_base02
 ! colors
 !#include ".Xresources.d/manjaro"
 ##include ".Xresources.d/gruvbox"
-#include ".Xresources.d/nord"
+!#include ".Xresources.d/nord"
+!#include ".Xresources.d/solarized_highcontrast"
+#include ".Xresources.d/ic_orange"
