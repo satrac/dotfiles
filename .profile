@@ -25,4 +25,9 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+export QT_STYLE_OVERRIDE=kvantum-dark
+
+export PATH=$PATH:/usr/local/go/bin
+
 . "$HOME/.cargo/env"

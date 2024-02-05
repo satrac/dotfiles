@@ -7,6 +7,6 @@ Exec=/home/johnm/.local/bin/merge_xrdb.sh
 Path=/home/johnm/.local/bin
 Comment=update xrdb with .Xresources
 Name=Merge xrdb
-Terminal=false
+Terminal=true
 StartupWMClass=mergexrdb
 MimeType=application/uproject

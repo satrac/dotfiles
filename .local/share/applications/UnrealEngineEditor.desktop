@@ -1,13 +1,17 @@
-#!/usr/bin/env xdg-open
-
 [Desktop Entry]
-Version=1.0
-Type=Application
-Exec=/home/johnm/unreal/5.2.0/Engine/Binaries/Linux/UnrealEditor %f
-Path=/home/johnm/unreal/5.2.0/Engine/Binaries/Linux
-Name=Unreal Editor
-Icon=/home/johnm/unreal/5.2.0/Engine/Content/Splash/IconDefault.bmp
-Terminal=false
-StartupWMClass=UnrealEditor
-MimeType=application/uproject
 Comment=Created By Unreal Engine
+Exec=/home/johnm/UnrealEngine/5.3.2/Engine/Binaries/Linux/UnrealEditor %f
+GenericName=Unreal Engine
+Icon=unreal-editor
+MimeType=application/uproject
+Name=Unreal Editor
+NoDisplay=false
+Path=/home/johnm/UnrealEngine/5.3.2/Engine/Binaries/Linux
+StartupNotify=true
+StartupWMClass=UnrealEditor
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.0
+X-KDE-SubstituteUID=false
+X-KDE-Username=

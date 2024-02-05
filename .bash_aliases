@@ -16,6 +16,7 @@ alias ln='ln -i'
 alias em='emacs -nw'
 alias dd='dd status=progress'
 
+#alias nvim='/snap/bin/nvim'
 alias n='nvim'
 alias v='vim'
 # vimdiff mode
@@ -59,3 +60,16 @@ alias hw="hwinfo --short"
 
 #mounting the folder Public for exchange betsweeh host and guest on virtualbox
 alias vbm="sudo mount -t vboxsf -o rw,uid=1000,gid=1000 Public /home/$USER/Public"
+
+
+alias sublime_text="/opt/sublime_text/sublime_text"
+
+# emacs
+alias customemacs="emacs --with-profile custom"
+alias spacemacs="emacs --with-profile spacemacs"
+alias doomemacs="emacs --with-profile doomemacs"
+alias vanillaemacs="emacs --with-profile vanilla"
+
+# flatpaks
+
+alias ncspot="flatpak run io.github.hrkfdn.ncspot"

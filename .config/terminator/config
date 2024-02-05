@@ -6,8 +6,11 @@
 [keybindings]
 [profiles]
   [[default]]
+    allow_bold = False
+    icon_bell = False
     background_color = "#2E3440"
-    background_darkness = 0.85
+    background_darkness = 0.8
+    background_type = transparent
     font = JetBrainsMono Nerd Font Mono 11
     foreground_color = "#D8DEE9"
     show_titlebar = False
@@ -17,22 +20,12 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[nord]]
-    background_color = "#2E3440"
-    cursor_blink = False
-    font = JetBrainsMono Nerd Font Mono 10
-    foreground_color = "#D8DEE9"
-    show_titlebar = False
-    scrollbar_position = hidden
-    scrollback_lines = 99000
-    palette = "#3B4252:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#88C0D0:#E5E9F0:#4C566A:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#8FBCBB:#ECEFF4"
-    use_system_font = False
-    bold_is_bright = True
   [[gruvbox]]
+    allow_bold = False
+    icon_bell = False
     background_color = "#1d2021"
     background_darkness = 0.85
     background_type = transparent
-    cursor_blink = False
     cursor_fg_color = "#282828"
     cursor_bg_color = "#ebdbb2"
     font = JetBrainsMono Nerd Font Mono 10
@@ -43,15 +36,18 @@
     palette = "#1d2021:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
     use_system_font = False
     bold_is_bright = True
+    copy_on_selection = True
     title_hide_sizetext = True
     title_use_system_font = False
     title_font = JetBrainsMono Nerd Font 9
   [[Nord]]
+    allow_bold = False
+    icon_bell = False
     background_color = "#2E3440"
     background_darkness = 0.9
     background_type = transparent
     cursor_bg_color = "#D8DEE9"
-    font = MonaspiceRn NFM 14
+    font = MonaspiceRn NF 14
     foreground_color = "#D8DEE9"
     show_titlebar = False
     scrollbar_position = hidden
@@ -61,10 +57,11 @@
     bold_is_bright = True
     copy_on_selection = True
   [[Batman]]
+    allow_bold = False
+    icon_bell = False
     background_color = "#1b1d1e"
     background_darkness = 0.85
     background_type = transparent
-    cursor_blink = False
     cursor_bg_color = "#fcef0c"
     font = JetBrainsMono Nerd Font Mono 10
     foreground_color = "#6f6f6f"
@@ -74,11 +71,13 @@
     palette = "#1b1d1e:#e6dc44:#c8be46:#f4fd22:#737174:#747271:#62605f:#c6c5bf:#505354:#fff78e:#fff27d:#feed6c:#919495:#9a9a9d:#a3a3a6:#dadbd6"
     use_system_font = False
     bold_is_bright = True
+    copy_on_selection = True
   [[Afterglow]]
+    allow_bold = False
+    icon_bell = False
     background_color = "#212121"
     background_darkness = 0.85
     background_type = transparent
-    cursor_blink = False
     cursor_bg_color = "#d0d0d0"
     font = JetBrainsMono Nerd Font Mono 10
     foreground_color = "#d0d0d0"
@@ -88,11 +87,12 @@
     palette = "#151515:#ac4142:#7e8e50:#e5b567:#6c99bb:#9f4e85:#7dd6cf:#d0d0d0:#505050:#ac4142:#7e8e50:#e5b567:#6c99bb:#9f4e85:#7dd6cf:#f5f5f5"
     use_system_font = False
     bold_is_bright = True
+    copy_on_selection = True
   [[AlienBlood]]
+    allow_bold = False
     icon_bell = False
     background_color = "#1e1e2e"
     background_darkness = 0.85
-    cursor_blink = False
     cursor_bg_color = "#f5e0dc"
     font = JetBrainsMono Nerd Font Mono 12
     foreground_color = "#cdd6f4"
@@ -102,10 +102,12 @@
     palette = "#45475a:#f38ba8:#a6e3a1:#f9e2af:#89b4fa:#f5c2e7:#94e2d5:#bac2de:#585b70:#f38ba8:#a6e3a1:#f9e2af:#89b4fa:#f5c2e7:#94e2d5:#a6adc8"
     use_system_font = False
     bold_is_bright = True
+    copy_on_selection = True
   [[Catppuccin_Mocha]]
+    allow_bold = False
+    icon_bell = False
     background_color = "#1e1e2e"
     background_darkness = 0.85
-    cursor_blink = False
     cursor_bg_color = "#f5e0dc"
     font = JetBrainsMono Nerd Font Mono 12
     foreground_color = "#cdd6f4"
@@ -115,10 +117,12 @@
     palette = "#45475a:#f38ba8:#a6e3a1:#f9e2af:#89b4fa:#f5c2e7:#94e2d5:#bac2de:#585b70:#f38ba8:#a6e3a1:#f9e2af:#89b4fa:#f5c2e7:#94e2d5:#a6adc8"
     use_system_font = False
     bold_is_bright = True
+    copy_on_selection = True
   [[Adventure]]
+    allow_bold = False
+    icon_bell = False
     background_color = "#040404"
     background_darkness = 0.85
-    cursor_blink = False
     cursor_bg_color = "#feffff"
     font = JetBrainsMono Nerd Font Mono 10
     foreground_color = "#feffff"
@@ -128,10 +132,12 @@
     palette = "#040404:#d84a33:#5da602:#eebb6e:#417ab3:#e5c499:#bdcfe5:#dbded8:#685656:#d76b42:#99b52c:#ffb670:#97d7ef:#aa7900:#bdcfe5:#e4d5c7"
     use_system_font = False
     bold_is_bright = True
+    copy_on_selection = True
   [[JetBrains Darcula]]
+    allow_bold = False
+    icon_bell = False
     background_color = "#202020"
     background_darkness = 0.85
-    cursor_blink = False
     cursor_bg_color = "#ffffff"
     font = JetBrainsMono Nerd Font Mono 10
     foreground_color = "#adadad"
@@ -141,12 +147,14 @@
     palette = "#000000:#fa5355:#126e00:#c2c300:#4581eb:#fa54ff:#33c2c1:#adadad:#555555:#fb7172:#67ff4f:#ffff00:#6d9df1:#fb82ff:#60d3d1:#eeeeee"
     use_system_font = False
     bold_is_bright = True
+    copy_on_selection = True
   [[Solarized Dark Higher Contrast]]
+    allow_bold = False
+    icon_bell = False
     background_color = "#001e27"
     background_darkness = 0.85
-    cursor_blink = False
     cursor_bg_color = "#f34b00"
-    font = MonaspiceRn NF 14
+    font = JetBrainsMono Nerd Font 12
     foreground_color = "#9cc2c3"
     show_titlebar = False
     scrollbar_position = hidden
@@ -154,6 +162,289 @@
     palette = "#002831:#d11c24:#6cbe6c:#a57706:#2176c7:#c61c6f:#259286:#eae3cb:#006488:#f5163b:#51ef84:#b27e28:#178ec8:#e24d8e:#00b39e:#fcf4dc"
     use_system_font = False
     bold_is_bright = True
+    copy_on_selection = True
+  [[IC_Orange_PPL]]
+    allow_bold = False
+    icon_bell = False
+    background_color = "#262626"
+    background_darkness = 0.85
+    background_type = transparent
+    cursor_bg_color = "#fc531d"
+    font = MonaspiceNe NF 11
+    foreground_color = "#ffcb83"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#000000:#c13900:#a4a900:#caaf00:#bd6d00:#fc5e00:#f79500:#ffc88a:#6a4f2a:#ff8c68:#f6ff40:#ffe36e:#ffbe55:#fc874f:#c69752:#fafaff"
+    use_system_font = False
+    copy_on_selection = True
+  [[Solarized Light]]
+    allow_bold = False
+    icon_bell = False
+    background_color = "#eee8d5"
+    background_darkness = 0.85
+    cursor_bg_color = "#002b36"
+    font = JetBrainsMono Nerd Font Mono 11
+    foreground_color = "#002b36"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Solarized Dark]]
+    allow_bold = False
+    icon_bell = False
+    background_color = "#002b36"
+    background_darkness = 0.85
+    cursor_bg_color = "#eee8d5"
+    font = JetBrainsMono Nerd Font Mono 11
+    foreground_color = "#eee8d5"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#586e75:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Dracula]]
+    allow_bold = False
+    icon_bell = False
+    background_color = "#1e1f29"
+    background_darkness = 0.9
+    background_type = transparent
+    cursor_bg_color = "#aaaaaa"
+    font = JetBrainsMono Nerd Font Mono 11
+    foreground_color = "#f8f8f2"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#44475a:#ff5555:#26a269:#f1fa8c:#8be9fd:#bd93f9:#ff79c6:#94a3a5:#000000:#ff5555:#2ec27e:#f1fa8c:#8be9fd:#bd93f9:#ff79c6:#ffffff"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Night Owl]]
+    allow_bold = False
+    icon_bell = False
+    background_color = "#011627"
+    background_darkness = 0.85
+    cursor_bg_color = "#80a4c2"
+    font = JetBrainsMono Nerd Font Mono 11
+    foreground_color = "#d6deeb"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#2e3436:#ef5350:#80cbc4:#ffeb95:#82aaff:#c792ea:#addb67:#d3d7cf:#555753:#ef5350:#80cbc4:#ffeb95:#82aaff:#c792ea:#addb67:#eeeeec"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[One dark]]
+    allow_bold = False
+    icon_bell = False
+    background_color = "#1e2127"
+    background_darkness = 0.85
+    cursor_bg_color = "#676c76"
+    font = JetBrainsMono Nerd Font Mono 11
+    foreground_color = "#5c6370"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#000000:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#abb2bf:#5c6370:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#fffefe"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[ayu]]
+    allow_bold = False
+    icon_bell = False
+    background_color = "#0f1419"
+    background_darkness = 0.85
+    cursor_bg_color = "#f29718"
+    font = JetBrainsMono Nerd Font Mono 11
+    foreground_color = "#e6e1cf"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#000000:#ff3333:#b8cc52:#e7c547:#36a3d9:#f07178:#95e6cb:#ffffff:#323232:#ff6565:#eafe84:#fff779:#68d5ff:#ffa3aa:#c7fffd:#ffffff"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Borland]]
+    allow_bold = False
+    icon_bell = False
+    background_color = "#0000a4"
+    background_darkness = 0.85
+    cursor_bg_color = "#ffa560"
+    font = JetBrainsMono Nerd Font Mono 11
+    foreground_color = "#ffff4e"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#4f4f4f:#ff6c60:#a8ff60:#ffffb6:#96cbfe:#ff73fd:#c6c5fe:#eeeeee:#7c7c7c:#ffb6b0:#ceffac:#ffffcc:#b5dcff:#ff9cfe:#dfdffe:#ffffff"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Brogrammer]]
+    allow_bold = False
+    icon_bell = False
+    background_color = "#131313"
+    background_darkness = 0.85
+    cursor_bg_color = "#b9b9b9"
+    font = JetBrainsMono Nerd Font Mono 11
+    foreground_color = "#d6dbe5"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#1f1f1f:#f81118:#2dc55e:#ecba0f:#2a84d2:#4e5ab7:#1081d6:#d6dbe5:#d6dbe5:#de352e:#1dd361:#f3bd09:#1081d6:#5350b9:#0f7ddb:#ffffff"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Candy]]
+    allow_bold = False
+    icon_bell = False
+    background_darkness = 0.85
+    cursor_bg_color = "#aaaaaa"
+    font = JetBrainsMono Nerd Font Mono 11
+    foreground_color = "#AAAAAA"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#2e3436:#fa2573:#a6e32d:#fc951e:#c48dff:#fa2573:#67d9f0:#f2f2f2:#555753:#fa2573:#8ae234:#fce94f:#729fcf:#fa2573:#34e2e2:#eeeeec"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Cobalt2]]
+    allow_bold = False
+    icon_bell = False
+    background_color = "#132738"
+    background_darkness = 0.85
+    cursor_bg_color = "#f0cc09"
+    font = JetBrainsMono Nerd Font Mono 11
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#000000:#ff0000:#38de21:#ffe50a:#1460d2:#ff005d:#00bbbb:#bbbbbb:#555555:#f40e17:#3bd01d:#edc809:#5555ff:#ff55ff:#6ae3fa:#ffffff"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Medallion]]
+    allow_bold = False
+    icon_bell = False
+    background_color = "#1d1908"
+    background_darkness = 0.85
+    cursor_bg_color = "#d3ba30"
+    font = JetBrainsMono Nerd Font Mono 11
+    foreground_color = "#cac296"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#000000:#b64c00:#7c8b16:#d3bd26:#616bb0:#8c5a90:#916c25:#cac29a:#5e5219:#ff9149:#b2ca3b:#ffe54a:#acb8ff:#ffa0ff:#ffbc51:#fed698"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[N0tch2k]]
+    allow_bold = False
+    icon_bell = False
+    background_color = "#222222"
+    background_darkness = 0.85
+    cursor_bg_color = "#aa9175"
+    font = JetBrainsMono Nerd Font Mono 11
+    foreground_color = "#a0a0a0"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#383838:#a95551:#666666:#a98051:#657d3e:#767676:#c9c9c9:#d0b8a3:#474747:#a97775:#8c8c8c:#a99175:#98bd5e:#a3a3a3:#dcdcdc:#d8c8bb"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Retro]]
+    allow_bold = False
+    icon_bell = False
+    background_darkness = 0.85
+    cursor_bg_color = "#13a10e"
+    font = JetBrainsMono Nerd Font Mono 11
+    foreground_color = "#13a10e"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#13a10e:#13a10e:#13a10e:#13a10e:#13a10e:#13a10e:#13a10e:#13a10e:#16ba10:#16ba10:#16ba10:#16ba10:#16ba10:#16ba10:#16ba10:#16ba10"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Rose Pine]]
+    allow_bold = False
+    icon_bell = False
+    background_color = "#191724"
+    background_darkness = 0.85
+    cursor_bg_color = "#9ccfd8"
+    font = JetBrainsMono Nerd Font Mono 11
+    foreground_color = "#e0def4"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#26233A:#eb6f91:#9ccfd8:#f6c177:#31748f:#65618d:#c4a7e7:#d3d7cf:#26233a:#eb6f91:#9ccfd8:#f6c177:#31748f:#65618d:#c4a7e7:#eeeeec"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Tomorrow Night]]
+    allow_bold = False
+    icon_bell = False
+    background_color = "#1d1f21"
+    background_darkness = 0.85
+    cursor_bg_color = "#c5c8c6"
+    font = JetBrainsMono Nerd Font Mono 11
+    foreground_color = "#c5c8c6"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#000000:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#ffffff:#000000:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#ffffff"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Wombat]]
+    allow_bold = False
+    icon_bell = False
+    background_color = "#171717"
+    background_darkness = 0.85
+    cursor_bg_color = "#bbbbbb"
+    font = JetBrainsMono Nerd Font Mono 11
+    foreground_color = "#dedacf"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#000000:#ff615a:#b1e969:#ebd99c:#5da9f6:#e86aff:#82fff7:#dedacf:#313131:#f58c80:#ddf88f:#eee5b2:#a5c7ff:#ddaaff:#b7fff9:#ffffff"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[NightLion v1]]
+    allow_bold = False
+    icon_bell = False
+    background_darkness = 0.85
+    cursor_bg_color = "#bbbbbb"
+    font = JetBrainsMono Nerd Font Mono 11
+    foreground_color = "#bbbbbb"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#4c4c4c:#bb0000:#5fde8f:#f3f167:#276bd8:#bb00bb:#00dadf:#bbbbbb:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Tomorrow Night Bright]]
+    allow_bold = False
+    icon_bell = False
+    background_darkness = 0.85
+    cursor_bg_color = "#eaeaea"
+    font = JetBrainsMono Nerd Font Mono 11
+    foreground_color = "#eaeaea"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 99000
+    palette = "#000000:#d54e53:#b9ca4a:#e7c547:#7aa6da:#c397d8:#70c0b1:#ffffff:#000000:#d54e53:#b9ca4a:#e7c547:#7aa6da:#c397d8:#70c0b1:#ffffff"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
 [layouts]
   [[default]]
     [[[window0]]]
@@ -162,5 +453,5 @@
     [[[child1]]]
       type = Terminal
       parent = window0
-      profile = Nord
+      profile = IC_Orange_PPL
 [plugins]

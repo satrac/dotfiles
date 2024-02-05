@@ -741,7 +741,14 @@ exec --no-starup-id xset b off
 #exec --no-startup-id setxkbmap -option ctrl:nocaps
 
 # set capslock as an additional ctrl
-exec --no-startup-id setxkbmap -option caps:ctrl_modifier
+#exec --no-startup-id setxkbmap -option caps:ctrl_modifier
+
+# set capslock as win key
+#exec --no-startup-id setxkbmap -option caps:super
+
+# set capslock as escape key
+exec --no-startup-id setxkbmap -option caps:escape
+
 
 # set monitor layout
 # used arandr to set layout

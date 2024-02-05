@@ -1,13 +1,20 @@
-#!/usr/bin/env xdg-open
-
 [Desktop Entry]
-Version=1.0
-Type=Application
-Exec=/home/johnm/repos/aseprite/build/bin/aseprite %f
-Path=/home/johnm/repos/aseprite/build/bin
-Name=Aseprite
-Icon=/home/johnm/repos/aseprite/build/bin/data/icons/ase256.png
-Terminal=false
-StartupWMClass=Aseprite
-MimeType=application/uproject
+Comment[en_CA]=Animated Sprite Editor & Pixel Art Tool
 Comment=Animated Sprite Editor & Pixel Art Tool
+Exec=/home/johnm/repos/aseprite/build/bin/aseprite %f
+GenericName[en_CA]=
+GenericName=
+Icon=/home/johnm/Repos/aseprite/build/bin/data/icons/ase256.png
+MimeType=
+Name[en_CA]=Aseprite
+Name=Aseprite
+NoDisplay=false
+Path=/home/johnm/repos/aseprite/build/bin
+StartupNotify=true
+StartupWMClass=Aseprite
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.0
+X-KDE-SubstituteUID=false
+X-KDE-Username=

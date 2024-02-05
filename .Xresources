@@ -29,6 +29,28 @@ XTerm*innerBorder:        4
 XTerm*visualBell:         false
 XTerm*selectToClipboard:  true
 
+
+!! UXterm
+!!XTerm*background:        #222D31
+!!XTerm*foreground:        #d8d8d8
+!!XTerm*pointerColor:      #1ABB9B
+UXTerm*locale:             true
+UXTerm.termName:           xterm-256color
+UXTerm*scrollBar:          false
+UXTerm*saveLines:          99000
+UXTerm*renderFont:         true
+!XTerm*faceName:           Monospace:size=12:antialias=true
+!XTerm*faceName:           Hack:size=11:antialias=true
+!XTerm*faceName:          Liberation Mono:size=12:antialias=true
+UXTerm*faceName:           JetBrainsMono Nerd Font:size=12:antialias=true
+UXTerm*cursorColor:        green
+UXTerm*cursorBlink:        true
+UXTerm*innerBorder:        4
+UXTerm*visualBell:         false
+UXTerm*selectToClipboard:  true
+
+
+
 !! Xcursor
 Xcursor.theme: Adwaita
 Xcursor.size:  0
@@ -40,7 +62,7 @@ URxvt.buffered:                 false
 URxvt.intensityStyles:          false
 !URxvt.font:                    xft:monospace:size=12
 !URxvt.font:                    xft:Liberation Mono:size=12:antialias=true
-URxvt.font:                    xft:JetBrainsMono Nerd Font:size=10:antialias=true
+URxvt.font:                    xft:JetBrainsMono Nerd Font:size=12:antialias=true
 !URxvt.font:                     xft:Hack:size=12:antialias=true
 URxvt.saveLines:                99000
 URxvt.scrollBar:                false
@@ -95,7 +117,8 @@ URxvt.keysym.Shift-Control-C:   eval:selection_to_clipboard
 ! URxvt.keysym.Shift-Control-Down:  \033[1;6B
 
 !! dmenu
-dmenu.font: Hack-12
+!dmenu.font: Hack-12
+!dmenu.font: JetBrainsMono-12
 dmenu.background: S_base02
 dmenu.foreground: S_base03
 dmenu.selforeground: S_base00
