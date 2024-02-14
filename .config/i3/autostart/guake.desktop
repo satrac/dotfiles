@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Guake Terminal
+Comment=Use the command line in a Quake-like terminal
+Exec=guake
+Icon=guake
+Type=Application
+Categories=GNOME;GTK;System;Utility;TerminalEmulator;
+StartupNotify=true
+Hidden=false
+NoDisplay=false
+OnlyShowIn=i3
