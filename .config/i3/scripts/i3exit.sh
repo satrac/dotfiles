@@ -3,7 +3,6 @@
 
 case "$1" in
   lock)
-    #slimlock
     loginctl lock-session
     ;;
   logout)

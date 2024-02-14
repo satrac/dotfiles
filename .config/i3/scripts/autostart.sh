@@ -7,7 +7,7 @@
 
 #$HOME/.config/polybar/launch.sh &
 
-#bg
+bg
 #nitrogen --restore &
 #~/.fehbg &
 #clipmenud &
@@ -16,6 +16,9 @@
 #pcloud &
 #unclutter &
 #vorta &
+#bg
+#redshift-gtk 2>/dev/null &
+#$HOME/Applications/OneDriveGUI-1.0.3-x86_64.AppImage 2>/dev/null &
 
 #xset r rate 220 90
 #setxkbmap -option caps:ctrl_modifier &
@@ -25,3 +28,5 @@
 
 #/usr/libexec/polkit-gnome-authentication-agent-1 &
 #/usr/lib/polkit-kde-authentication-agent-1 &
+
+exit 0

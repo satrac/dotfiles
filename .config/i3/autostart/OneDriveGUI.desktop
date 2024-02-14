@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=OneDriveGUI (1.0.2)
+Exec=/home/johnm/Applications/OneDriveGUI-1.0.3-x86_64.AppImage
+Icon=/home/johnm/.icons/onedrive-icon-transparent.png
+Type=Application
+Terminal=false
+Categories=Utility;
+OnlyShowIn=GNOME;Xfce;KDE;i3
