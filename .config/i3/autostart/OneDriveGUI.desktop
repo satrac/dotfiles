@@ -4,6 +4,6 @@ Exec=/home/johnm/Applications/OneDriveGUI-1.0.3-x86_64.AppImage
 Icon=/home/johnm/.icons/onedrive-icon-transparent.png
 Type=Application
 Terminal=false
-StartupNotify=true
+StartupNotify=false
 Categories=Utility;
 OnlyShowIn=i3

@@ -8,6 +8,6 @@ Icon=redshift
 Terminal=false
 Type=Application
 Categories=Utility;
-StartupNotify=true
+StartupNotify=false
 Hidden=false
 OnlyShowIn=i3
