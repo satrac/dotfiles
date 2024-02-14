@@ -23,8 +23,6 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-set -o emacs
-
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
@@ -121,6 +119,4 @@ fi
 
 # source personal bash config
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
-
-
 . "$HOME/.cargo/env"

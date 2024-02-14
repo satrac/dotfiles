@@ -11,3 +11,4 @@ Terminal=true
 StartupWMClass=setcapslock
 MimeType=application/uproject
 X-GNOME-Autostart-enabled=false
+NotShowIn=i3

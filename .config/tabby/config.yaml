@@ -1,0 +1,330 @@
+version: 7
+profiles: []
+groups: []
+configSync:
+  parts: {}
+hotkeys:
+  toggle-window:
+    - Ctrl-Space
+  copy-current-path: []
+  ctrl-c:
+    - Ctrl-C
+  copy:
+    - Ctrl-Shift-C
+  paste:
+    - Ctrl-Shift-V
+    - Shift-Insert
+  select-all:
+    - Ctrl-Shift-A
+  clear: []
+  zoom-in:
+    - Ctrl-=
+    - Ctrl-Shift-=
+  zoom-out:
+    - Ctrl--
+    - Ctrl-Shift--
+  reset-zoom:
+    - Ctrl-0
+  home:
+    - Home
+  end:
+    - End
+  previous-word:
+    - Ctrl-Left
+  next-word:
+    - Ctrl-Right
+  delete-previous-word:
+    - Ctrl-Backspace
+  delete-line:
+    - Ctrl-Shift-Backspace
+  delete-next-word:
+    - Ctrl-Delete
+  search:
+    - Ctrl-Shift-F
+  pane-focus-all:
+    - Ctrl-Shift-I
+  focus-all-tabs:
+    - Ctrl-Alt-Shift-I
+  scroll-to-top:
+    - Ctrl-PageUp
+  scroll-up:
+    - Alt-PageUp
+  scroll-down:
+    - Alt-PageDown
+  scroll-to-bottom:
+    - Ctrl-PageDown
+  restart-telnet-session: []
+  restart-ssh-session: []
+  launch-winscp: []
+  settings-tab: {}
+  settings:
+    - Ctrl-,
+  serial:
+    - Alt-K
+  restart-serial-session: []
+  new-tab:
+    - Ctrl-Shift-T
+  new-window:
+    - Ctrl-Shift-N
+  profile: {}
+  profile-selectors: {}
+  toggle-fullscreen:
+    - F11
+  close-tab:
+    - Ctrl-Shift-W
+  reopen-tab:
+    - Ctrl-Shift-Z
+  toggle-last-tab: []
+  rename-tab:
+    - Ctrl-Shift-R
+  next-tab:
+    - Ctrl-Shift-Right
+    - Ctrl-Tab
+  previous-tab:
+    - Ctrl-Shift-Left
+    - Ctrl-Shift-Tab
+  move-tab-left:
+    - Ctrl-Shift-PageUp
+  move-tab-right:
+    - Ctrl-Shift-PageDown
+  rearrange-panes:
+    - Ctrl-Shift
+  duplicate-tab: []
+  restart-tab: []
+  reconnect-tab: []
+  disconnect-tab: []
+  explode-tab:
+    - Ctrl-Shift-.
+  combine-tabs:
+    - Ctrl-Shift-,
+  tab-1:
+    - Alt-1
+  tab-2:
+    - Alt-2
+  tab-3:
+    - Alt-3
+  tab-4:
+    - Alt-4
+  tab-5:
+    - Alt-5
+  tab-6:
+    - Alt-6
+  tab-7:
+    - Alt-7
+  tab-8:
+    - Alt-8
+  tab-9:
+    - Alt-9
+  tab-10:
+    - Alt-0
+  tab-11: []
+  tab-12: []
+  tab-13: []
+  tab-14: []
+  tab-15: []
+  tab-16: []
+  tab-17: []
+  tab-18: []
+  tab-19: []
+  tab-20: []
+  split-right:
+    - Ctrl-Shift-S
+  split-bottom:
+    - Ctrl-Shift-D
+  split-left: []
+  split-top: []
+  pane-nav-right:
+    - Ctrl-Alt-Right
+  pane-nav-down:
+    - Ctrl-Alt-Down
+  pane-nav-up:
+    - Ctrl-Alt-Up
+  pane-nav-left:
+    - Ctrl-Alt-Left
+  pane-nav-previous:
+    - Ctrl-Alt-[
+  pane-nav-next:
+    - Ctrl-Alt-]
+  pane-nav-1: []
+  pane-nav-2: []
+  pane-nav-3: []
+  pane-nav-4: []
+  pane-nav-5: []
+  pane-nav-6: []
+  pane-nav-7: []
+  pane-nav-8: []
+  pane-nav-9: []
+  pane-maximize:
+    - Ctrl-Alt-Enter
+  pane-increase-vertical: []
+  pane-decrease-vertical: []
+  pane-increase-horizontal: []
+  pane-decrease-horizontal: []
+  close-pane: []
+  switch-profile:
+    - Ctrl-Alt-T
+  profile-selector:
+    - Ctrl-Shift-E
+  command-selector:
+    - Ctrl-Shift-P
+terminal:
+  searchOptions: {}
+  colorScheme:
+    name: Gruvbox Dark
+    foreground: '#e6d4a3'
+    background: '#1e1e1e'
+    cursor: '#bbbbbb'
+    colors:
+      - '#161819'
+      - '#f73028'
+      - '#aab01e'
+      - '#f7b125'
+      - '#719586'
+      - '#c77089'
+      - '#7db669'
+      - '#faefbb'
+      - '#7f7061'
+      - '#be0f17'
+      - '#868715'
+      - '#cc881a'
+      - '#377375'
+      - '#a04b73'
+      - '#578e57'
+      - '#e6d4a3'
+  font: JetBrainsMono Nerd Font
+  fallbackFont: FiraCode Nerd Font
+  customColorSchemes:
+    - name: Catppuccin Mocha
+      foreground: '#cdd6f4'
+      background: '#1e1e2e'
+      selection: null
+      cursor: '#f5e0dc'
+      cursorAccent: null
+      colors:
+        - '#45475a'
+        - '#f38ba8'
+        - '#a6e3a1'
+        - '#f9e2af'
+        - '#89b4fa'
+        - '#f5c2e7'
+        - '#94e2d5'
+        - '#bac2de'
+        - '#585b70'
+        - '#f38ba8'
+        - '#a6e3a1'
+        - '#f9e2af'
+        - '#89b4fa'
+        - '#f5c2e7'
+        - '#94e2d5'
+        - '#a6adc8'
+    - name: Catppuccin Macchiato
+      foreground: '#cdd6f4'
+      background: '#24273a'
+      selection: null
+      cursor: '#f4dbd6'
+      cursorAccent: null
+      colors:
+        - '#494d64'
+        - '#f38ba8'
+        - '#a6da95'
+        - '#eed49f'
+        - '#8aadf4'
+        - '#f5bde6'
+        - '#8bd5ca'
+        - '#b8c0e0'
+        - '#5b6078'
+        - '#f38ba8'
+        - '#a6da95'
+        - '#eed49f'
+        - '#8aadf4'
+        - '#f5bde6'
+        - '#8bd5ca'
+        - '#a5adcb'
+    - name: Catppuccin Latte
+      foreground: '#4c4f69'
+      background: '#eff1f5'
+      selection: null
+      cursor: '#dc8a78'
+      cursorAccent: null
+      colors:
+        - '#5c5f77'
+        - '#d20f39'
+        - '#40a02b'
+        - '#df8e1d'
+        - '#1e66f5'
+        - '#ea76cb'
+        - '#179299'
+        - '#acb0be'
+        - '#6c6f85'
+        - '#d20f39'
+        - '#40a02b'
+        - '#df8e1d'
+        - '#1e66f5'
+        - '#ea76cb'
+        - '#179299'
+        - '#bcc0cc'
+    - name: Catppuccin Frappé
+      foreground: '#c6d0f5'
+      background: '#303446'
+      selection: null
+      cursor: '#f2d5cf'
+      cursorAccent: null
+      colors:
+        - '#51576d'
+        - '#e78284'
+        - '#a6d189'
+        - '#e5c890'
+        - '#8caaee'
+        - '#f4b8e4'
+        - '#81c8be'
+        - '#b5bfe2'
+        - '#51576d'
+        - '#e78284'
+        - '#a6d189'
+        - '#e5c890'
+        - '#8caaee'
+        - '#f4b8e4'
+        - '#81c8be'
+        - '#a5adce'
+  wordSeparator: ' ()[]{}''";'
+  copyOnSelect: true
+  copyAsHTML: false
+  warnOnMultilinePaste: false
+  lightColorScheme:
+    name: Tabby Default Light
+    foreground: '#4d4d4c'
+    background: '#ffffff'
+    cursor: '#4d4d4c'
+    colors:
+      - '#000000'
+      - '#c82829'
+      - '#718c00'
+      - '#eab700'
+      - '#4271ae'
+      - '#8959a8'
+      - '#3e999f'
+      - '#ffffff'
+      - '#000000'
+      - '#c82829'
+      - '#718c00'
+      - '#eab700'
+      - '#4271ae'
+      - '#8959a8'
+      - '#3e999f'
+      - '#ffffff'
+ssh: {}
+clickableLinks: {}
+accessibility: {}
+appearance:
+  spaciness: 0.7
+hacks: {}
+providerBlacklist: []
+commandBlacklist: []
+enableWelcomeTab: false
+pluginBlacklist: []
+profileDefaults:
+  ssh:
+    disableDynamicTitle: true
+profileBlacklist: []
+language: en-US
+recoverTabs: false

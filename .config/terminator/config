@@ -109,7 +109,7 @@
     background_color = "#1e1e2e"
     background_darkness = 0.85
     cursor_bg_color = "#f5e0dc"
-    font = JetBrainsMono Nerd Font Mono 12
+    font = JetBrainsMono Nerd Font 11
     foreground_color = "#cdd6f4"
     show_titlebar = False
     scrollbar_position = hidden
@@ -453,5 +453,5 @@
     [[[child1]]]
       type = Terminal
       parent = window0
-      profile = IC_Orange_PPL
+      profile = Catppuccin_Mocha
 [plugins]

@@ -10,3 +10,4 @@ Name=Merge xrdb
 Terminal=true
 StartupWMClass=mergexrdb
 MimeType=application/uproject
+NotShowIn=i3

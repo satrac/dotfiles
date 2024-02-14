@@ -12,6 +12,15 @@
 #    fi
 #fi
 
+# colorize LESS
+export LESS_TERMCAP_mb=$'\e[1;36m'
+export LESS_TERMCAP_md=$'\e[1;36m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+
 # shopt
 shopt -s autocd         # change to named directory
 shopt -s cdspell        # autocorrects cd misspellings
@@ -19,6 +28,11 @@ shopt -s cmdhist        # save multi-line commands in history as single line
 shopt -s dotglob
 shopt -s histappend     # do not overwrite history
 shopt -s expand_aliases # expand aliases
+shopt -s checkwinsize   # updates LINES and COLUMNS on window resize
+shopt -s globstar       # allows pattern "**" expands to recursively match all files and subdirectories
+
+# I'm just used to this mode
+set -o emacs
 
 # disable Ctrl-S and Ctrl-Q
 stty stop ''
@@ -64,9 +78,9 @@ alias nvim-chad="NVIM_APPNAME=NvChad nvim"
 alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
 alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
 alias nvim-kick="NVIM_APPNAME=kickstart nvim"
-
+alias nvim-lunar="lvim"
 nvims() {
-  items=("default" "NvChad" "LazyVim" "AstroNvim" "kickstart")
+  items=("default" "NvChad" "LazyVim" "AstroNvim" "kickstart" "lunarvim")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
@@ -74,6 +88,11 @@ nvims() {
   elif [[ $config == "default" ]]; then
     config=""
     alias n="nvim"
+  elif [[ $config == "lunarvim" ]]; then
+    config=""
+    alias n="lvim"
+    lvim $@
+    return 0
   else
     alias n="NVIM_APPNAME=${config} nvim"
   fi

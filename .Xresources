@@ -8,7 +8,7 @@ Xft.hintstyle: hintsfull
 Xft.lcdfilter: lcddefault
 
 !! global font
-!*.font: xft:monospace:size=12
+!!*.font: xft:monospace:size=12
 
 !! Xterm
 !!XTerm*background:        #222D31
@@ -49,11 +49,14 @@ UXTerm*innerBorder:        4
 UXTerm*visualBell:         false
 UXTerm*selectToClipboard:  true
 
-
+!! Xcursor theme
+Xcursor.theme: Qogir-Recolored-Gruvbox-Orange
+!Xcursor.size: 46
+Xcursor.size:  0
 
 !! Xcursor
-Xcursor.theme: Adwaita
-Xcursor.size:  0
+!Xcursor.theme: Adwaita
+!Xcursor.size:  0
 
 !! Urxvt
 URxvt.imLocale:                 en_US.UTF-8

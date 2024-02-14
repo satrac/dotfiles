@@ -13,10 +13,26 @@ alias rm='rm -i'
 alias mv='mv -i'
 alias ln='ln -i'
 
+# navigation
+alias ..="cd .."
+#alias ll='ls -alF'
+#alias la='ls -A'
+alias l='ls -F'
+alias ls="lsd"
+alias ll="lsd -l"
+alias la="lsd -a"
+alias lsla="lsd -la"
+alias r="ranger"
+alias copy="rsync -P"
+alias cat="bat --style=plain"
+
+# config edits
+alias zconf="vim ~/.config/zsh/.zshrc"
+alias bconf="vim ~/.bashrc"
+
 alias em='emacs -nw'
 alias dd='dd status=progress'
 
-#alias nvim='/snap/bin/nvim'
 alias n='nvim'
 alias v='vim'
 # vimdiff mode
@@ -45,6 +61,11 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
+#youtube
+alias ytm="youtube-dl --extract-audio --audio-format mp3"
+alias ytv="youtube-dl -f bestvideo+bestaudio"
+
+
 #continue download
 alias wget='wget -c'
 
@@ -63,6 +84,8 @@ alias vbm="sudo mount -t vboxsf -o rw,uid=1000,gid=1000 Public /home/$USER/Publi
 
 
 alias sublime_text="/opt/sublime_text/sublime_text"
+
+alias tabby="$HOME/Applications/tabby-1.0.206-nightly.0-linux-x64/tabby"
 
 # emacs
 alias customemacs="emacs --with-profile custom"
