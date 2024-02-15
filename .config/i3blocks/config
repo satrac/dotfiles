@@ -1,22 +1,12 @@
 # i3blocks config file changed for EndeavourOS-i3 setup
 
-# source is available here:
-# https://raw.githubusercontent.com/endeavouros-team/endeavouros-i3wm-setup/main/.config/i3/i3blocks.conf
-# Maintainer: joekamprad [joekamprad@endeavouros.com]
-# Former Visual Designer: Florent Valetti [@FLVAL EndeavourOS]
-# created for i3wm setup on EndeavourOS
-# https://endeavouros.com
-
 # cheatsheet for icon fonts used on the block-bar:
 # https://fontawesome.com/v4.7/cheatsheet/
 # https://fontawesome.com/v5/cheatsheet/
-
-# --> to update this run the following command:
-# wget --backups=1 https://raw.githubusercontent.com/endeavouros-team/endeavouros-i3wm-setup/main/.config/i3/i3blocks.conf -P ~/.config/i3/
-
+# https://www.nerdfonts.com/cheat-sheet
+#
 # Please see man i3blocks for a complete reference!
 # The man page is also hosted at http://vivien.github.io/i3blocks
-
 
 # List of valid properties:
 #
@@ -38,23 +28,42 @@
 # Global properties
 #
 # The top properties below are applied to every block, but can be overridden.
+full_text=::
 separator=false
 markup=pango
+#color=#717171
+seperator_min_width=1
+
+[logo]
+full_text=
+
+[seperator]
+color=#717171
+full_text=|
 
 [Weather]
-#command=~/.config/i3/scripts/openweather
+#command=~/.config/i3blocks/scripts/openweather
 # or:
-command=~/.config/i3/scripts/openweather-city
+command=~/.config/i3blocks/scripts/openweather-city
 interval=1800
-color=#7275b3
+#color=#717171
+
+[seperator]
+color=#717171
 
 [terminal]
-full_text= 
+#full_text= 
+full_text=
 color=#807dfe
 command=i3-msg -q exec kitty
 
-[browser]
-full_text=󰖟
+[files]
+full_text= 
+color=#7f3fbf
+command=i3-msg -q exec thunar ~/
+
+[firefox]
+#full_text= 󰖟
 #full_text=
 full_text= 
 #full_text= 
@@ -62,8 +71,8 @@ color=#ff7f81
 #command=i3-msg -q exec brave-browser-stable
 command=i3-msg -q exec firefox
 
-[browser-2]
-full_text=󰖟
+[bravebrowser]
+#full_text= 
 #full_text=
 #full_text= 
 full_text= 
@@ -71,18 +80,59 @@ color=#ff7f81
 command=i3-msg -q exec brave-browser-stable
 #command=i3-msg -q exec firefox
 
-[files]
-full_text= 
-color=#7f3fbf
-command=i3-msg -q exec thunar ~/
+[steam]
+full_text= 󰓓
+color=#807dfe
+command=i3-msg -q exec steam
 
-#[mail]
+[heroic]
+full_text= 
+color=#807dfe
+command=i3-msg -q exec heroic
+
+[vscode]
+full_text= 󰨞
+color=#807dfe
+command=i3-msg -q exec code
+
+[mail]
 #full_text= 
-#color=#dbcb75
-#command=i3-msg -q exec thunderbird
+full_text= 󰊫
+color=#dbcb75
+command=i3-msg -q "exec brave-browser-stable --app=https://mail.google.com --profile-directory='Default'"
 
-[simple-2]
-full_text=::
+[discord]
+full_text= 󰙯
+color=#807dfe
+command=i3-msg -q exec flatpak run com.discordapp.Discord
+
+[obs-studio]
+#full_text= 󰡂
+#full_text= 󰑋
+#full_text= 󰻂
+#full_text= 
+full_text= 󱡝
+#full_text= 󱡞
+#color=#7f3fbf
+command=i3-msg -q exec obs
+
+[obsidian]
+#full_text= 󱓧
+#full_text= 󱤅
+#full_text= 
+#full_text= 󰆼
+#full_text= 󰮆
+full_text= 󰧑
+color=#807dfe
+command=i3-msg -q exec flatpak run md.obsidian.Obsidian
+
+
+[input-leap]
+full_text= 󰍺
+color=#407437
+command=i3-msg -q exec input-leap
+
+[seperator]
 color=#717171
 
 # Disk usage
@@ -91,7 +141,9 @@ color=#717171
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
 [disk]
-label=
+#label= ‎
+#label=󱛟 ‎
+label=󰆼 ‎
 instance=/
 command=~/.config/i3blocks/scripts/disk
 interval=30
@@ -100,12 +152,16 @@ interval=30
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
-label=
+label= ‎
+#label=󰍛 ‎
+#label=󰘚 ‎
+#label=  ‎
 command=~/.config/i3blocks/scripts/memory
 interval=2
 
 [cpu_usage]
-label=
+label= ‎
+#label=󰻠 ‎
 command=~/.config/i3blocks/scripts/cpu_usage
 #min_width=CPU: 100.00%
 interval=2
@@ -127,8 +183,11 @@ interval=30
 #interval=30
 
 [bandwidth]
+label=󰈀
+#label=󰛳
 command=~/.config/i3blocks/scripts/bandwidth2
 interval=persist
+#interval=5
 
 # Battery indicator
 #[battery]
@@ -138,18 +197,22 @@ interval=persist
 #label=
 #interval=30
 
-[simple-2]
-full_text=::
+[seperator]
 color=#717171
+full_text=|
 
 [pavucontrol]
 full_text=
 command=pavucontrol
 
-[volume-pulseaudio]
+[volume]
 command=~/.config/i3blocks/scripts/volume
 instance=Master
 interval=1
+
+#[seperator]
+#full_text=|
+#color=#717171
 
 # display keyboard layout name
 # for keyboard layouts switcher
@@ -157,7 +220,7 @@ interval=1
 # this needs xkblayout-state installed from the AUR:
 # https://aur.archlinux.org/packages/xkblayout-state-git
 #[keyboard-layout]
-#command=~/.config/i3/scripts/keyboard-layout
+#command=~/.config/i3blocks/scripts/keyboard-layout
 #interval=2
 
 [keybindings]
@@ -170,6 +233,11 @@ command=~/.config/i3blocks/scripts/keyhint-2
 # https://wiki.archlinux.org/title/CPU_frequency_scaling#power-profiles-daemon
 
 #set power-profile
+[seperator]
+color=#717171
+# invisible character to give some room
+full_text=‎
+
 [ppd_menu]
 full_text=
 command=~/.config/i3blocks/scripts/power-profiles
@@ -180,6 +248,9 @@ color=#407437
 #command=~/.config/i3blocks/scripts/ppd-status
 #interval=5
 
+[seperator]
+color=#717171
+
 [time]
 #label=
 command=date '+%a %d %b %H:%M:%S'
@@ -189,6 +260,5 @@ interval=1
 full_text=
 command=~/.config/i3blocks/scripts/powermenu
 
-[simple-2]
-full_text=::
+[seperator]
 color=#717171
