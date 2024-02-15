@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Discord
-Comment=All-in-one voice and text chat for gamers
-Exec=flatpak run com.disordapp.Discord
-Icon=discord
-Type=Application
-Categories=GNOME;GTK;Network;InstantMessaging;
-StartupNotify=true
-OnlyShowIn=i3
