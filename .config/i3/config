@@ -1,5 +1,13 @@
 # i3 config file (v4)
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-# include *.conf files
-include ~/.config/i3/config.d/*.conf
+include ~/.config/i3/base.conf
+include ~/.config/i3/terminal.conf
+include ~/.config/i3/menu.conf
+include ~/.config/i3/mediakeys.conf
+include ~/.config/i3/appearance.conf
+include ~/.config/i3/windowmanagement.conf
+include ~/.config/i3/workspaces.conf
+include ~/.config/i3/windowrules.conf
+include ~/.config/i3/bar.conf
+include ~/.config/i3/autostart.conf
